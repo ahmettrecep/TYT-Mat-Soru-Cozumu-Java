@@ -27,8 +27,8 @@ public class KokluSayiIslemleriImpl implements KokluSayiIslemleri {
         boolean derece = sayilarinDerecesiEsitMi(kokluSayi1,kokluSayi2);
         KokluSayi sonucKokluSayi = new KokluSayi();
         //******************Alt 2 satır yeni oluşturuldu***************
-        kokluSayi1 = kokluSayininEnSadeHaliniHesapla(kokluSayi1);
-        kokluSayi2 = kokluSayininEnSadeHaliniHesapla(kokluSayi2);
+        /*kokluSayi1 = kokluSayininEnSadeHaliniHesapla(kokluSayi1);
+        kokluSayi2 = kokluSayininEnSadeHaliniHesapla(kokluSayi2);*/
         if((operator == '+' || operator == '-') && kokDerece){
             sonucKokluSayi.setKokDerecesi(kokluSayi1.getKokDerecesi());
             sonucKokluSayi.setKokIciDeger(kokluSayi1.getKokIciDeger());
@@ -126,34 +126,28 @@ public class KokluSayiIslemleriImpl implements KokluSayiIslemleri {
     public Map<KokluSayi,KokluSayi> ikiBinYirmiSorusu(List<KokluSayi> sayilar) {
         Map<KokluSayi,KokluSayi> sonuc = new HashMap<KokluSayi,KokluSayi>();
         KokluSayi islemdekiKoklu;
-        List<KokluSayi> sayilarYedek = new LinkedList<KokluSayi>();
-        int i = 0;
-        while(!sayilar.isEmpty()){
-            sayilarYedek.addAll(sayilar);
-            islemdekiKoklu = sayilarYedek.get(i);
-            sayilarYedek.remove(i);
+        List<KokluSayi> sayilarYedekBir = new LinkedList<KokluSayi>();
+        List<KokluSayi> sayilarYedekAsil = new LinkedList<KokluSayi>();
+        sayilarYedekAsil.addAll(sayilar);
+        int toplam = 0;
+        for(int i=0;i<sayilarYedekAsil.size() / 2;i++){
+            sayilarYedekBir.addAll(sayilarYedekAsil);
+            islemdekiKoklu = sayilarYedekAsil.get(i);
+            sayilarYedekBir.remove(i);
             int j = 0;
-            while(j < sayilarYedek.size()){
-                boolean derecelerEsitMi = sayilarinDerecesiEsitMi(islemdekiKoklu, sayilarYedek.get(j));
+            while(!sayilarYedekBir.isEmpty()){
+                boolean derecelerEsitMi = sayilarinDerecesiEsitMi(islemdekiKoklu,sayilarYedekBir.get(j));
                 if(derecelerEsitMi){
-                    KokluSayi islemSonucu = dortIslem(islemdekiKoklu, sayilarYedek.get(j), '*');
-                    islemSonucu = kokluSayininEnSadeHaliniHesapla(islemSonucu);
-                    if(islemSonucu.getKokIciDeger() == 1){
-                        sonuc.put(islemdekiKoklu, sayilarYedek.get(j));
-                        sayilar.remove(i);
-                        i--;
-                        sayilar.remove(j);
-                        break;
+                    KokluSayi sonucSayisi = dortIslem(islemdekiKoklu, sayilarYedekBir.get(j), '*');
+                    //System.out.println(islemdekiKoklu.getKokIciDeger() + " * " + sayilarYedekBir.get(j).getKokIciDeger() + " = " + sonucSayisi.getKokIciDeger());
+                    if(sonucSayisi.getKokIciDeger() == 1){
+                        sonuc.put(islemdekiKoklu, sayilarYedekBir.get(j));
                     }
+                    sayilarYedekBir.remove(j);
                 }
-                j++;
             }
-            if(sayilar.size() != 0)
-                i = (i + 1) % sayilar.size();
-            else
-                continue;
-            sayilarYedek.clear();
         }
+
         return sonuc;
     }
 }

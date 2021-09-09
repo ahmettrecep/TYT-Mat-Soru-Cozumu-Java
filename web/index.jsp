@@ -285,7 +285,9 @@
       var soruIndex = document.createElement('div');
       soruIndex.setAttribute("class", "row");
       soruIndex.setAttribute("id", "soruIndex");
-      soruIndex.innerHTML += '2020.1';
+      soruIndex.innerHTML += 'Aşağıdaki kutucuklara, yukarıda gördüğünüz sorudaki kareköklü sayılar yazılmalıdır. Sayılar yazarken kullanılacak biçim, sağ üstte gösterilen anatomideki gibidir..<br>' +
+              "Örneğin; Kök 5 sayısının derecesi 2, katsayısı 1, kök içi değeri 5'tir.";
+      soruIndex.style.color = "#ffffff";
 
       //İlk sayının kolon divlerini içeren div
       var satirIki = document.createElement("div");
@@ -750,36 +752,36 @@
       var data;
       data = JSON.stringify({
         "birinci":[{
-          birKokD: kokDereceBir,
-          birKokK: kokKatsayiBir,
-          birKokID: kokIciDegerBir}],
+          birKokD: kokDereceBir.value,
+          birKokK: kokKatsayiBir.value,
+          birKokID: kokIciDegerBir.value}],
 
         "ikinci":[{
-          ikiKokD: kokDereceIki,
-          ikiKokK: kokKatsayiIki,
-          ikiKokID: kokIciDegerIki
+          ikiKokD: kokDereceIki.value,
+          ikiKokK: kokKatsayiIki.value,
+          ikiKokID: kokIciDegerIki.value
         }],
 
         "ucuncu":[{
-          ucKokD: kokDereceUc,
-          ucKokK: kokKatsayiUc,
-          ucKokID: kokIciDegerUc
+          ucKokD: kokDereceUc.value,
+          ucKokK: kokKatsayiUc.value,
+          ucKokID: kokIciDegerUc.value
         }],
         "dorduncu":[{
-          dortKokD: kokDereceDort,
-          dortKokK: kokKatsayiDort,
-          dortKokID: kokIciDegerDort
+          dortKokD: kokDereceDort.value,
+          dortKokK: kokKatsayiDort.value,
+          dortKokID: kokIciDegerDort.value
         }],
 
         "besinci":[{
-          besKokD: kokDereceBes,
-          besKokK: kokKatsayiBes,
-          besKokID: kokIciDegerDort
+          besKokD: kokDereceBes.value,
+          besKokK: kokKatsayiBes.value,
+          besKokID: kokIciDegerBes.value
         }],
         "altinci":[{
-          altiKokD: kokDereceAlti,
-          altiKokK: kokKatsayiAlti,
-          altiKokID: kokIciDegerAlti
+          altiKokD: kokDereceAlti.value,
+          altiKokK: kokKatsayiAlti.value,
+          altiKokID: kokIciDegerAlti.value
         }]
       });
       xhr.send(data);
@@ -794,11 +796,11 @@
       var span = document.getElementsByClassName("close")[0];
       modal.style.display="block";
       var icerik = document.getElementById("popupIcerik");
-      icerik.innerHTML = "<h3>Çözüm</h3>Bu soruda dikkat etmeniz gereken nokta; <b>hangi iki köklü sayının çarpımının tam sayı olduğunu bulmaktır.</b> <br>" +
+      icerik.innerHTML = "<h3>Dikkat!</h3>Bu soruda dikkat etmeniz gereken nokta; <b>hangi iki köklü sayının çarpımının tam sayı olduğunu bulmaktır.</b> <br>" +
               "Örneğin; kök içi değeri 5 olan sayı ile hangi sayıyı çarparsanız tam sayı elde edersiniz? Normalde bu çözümü zihnimizden de yapabiliriz. <br>>" +
               "Soruyu anlamak için çözüme bir adım daha yakından bakalım." +
               "Kök 5'ten bahsettik. 5 bir asal sayıdır. 5 ile geri kalan sayılardan hangi sayıyı çarparsak 5^2'ni ve diğer asal sayının karesini elde ederiz? " +
-              "20'yi çarpanlarına ayırırsak 5*4 olduğunu ve 4'ü de 2^2(2'nin karesi) şeklinde yazabileceğimizi görürüz. Öyleyse; <br> " +
+              "20'yi çarpanlarına ayırırsak 5*4 olduğunu ve 4'ü de 2^2(2'nin karesi) şeklinde yazabileceğimizi görürüz. Yani 20'nin kök dışına çıkabilmesi için bir adet 5 çarpanı eksik görünüyor. Öyleyse; <br> " +
               "5 ile 20'yi çarparsak 5*5*2*2 elde edeceğiz. Kök dışına da 5*2 çıkacaktır. Çünkü kökün derecesi 2 olarak verilmiş. " +
               "Operatörler tablosu altında da 2020.1 adlı butona bastığınızda sizden 6 adet sayı girmenizi bekleyecektir. Arka planda sorunun çözümü için aynı şekilde yukarıdaki yöntem izlenmektedir.<br>" +
               "<b>Yani her bir sayıyı diğer tüm sayılarla birer birer çarparak sonucun kök içi değerinin 1 olduğu değerleri aramaktadır.</b> <br>" +
@@ -868,6 +870,10 @@
       text-align: center;
       vertical-align: middle;
       font-size:14pt;
+    }
+
+    #soruIndex{
+      font-weight:bold;
     }
 
     /* The Modal (background) */
