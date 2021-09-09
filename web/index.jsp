@@ -711,6 +711,12 @@
 
       satirBir.appendChild(satirSekiz);
 
+      var sonucGoster = document.createElement("div");
+      sonucGoster.setAttribute("class", "row");
+      sonucGoster.setAttribute("id", "sonucGoster");
+
+      satirBir.appendChild(sonucGoster);
+
       var formId = document.getElementById("sayilarForm");
       formId.appendChild(satirBir);
     }
@@ -744,6 +750,7 @@
       var kokIciDegerAlti = document.getElementById("2020_kokIciDeger_6");
 
       var sonuc = document.getElementById("2020_sonuc");
+      var sonucGoster = document.getElementById("sonucGoster");
 
       let url = '/TYT_Mat_Soru_Cozumu_Java_war_exploded/Servlet/ikiBinYirmi';
       let xhr = new XMLHttpRequest();
@@ -787,7 +794,7 @@
       xhr.send(data);
       xhr.onload = function(){
         sonuc.readOnly = true
-        sonuc.value = xhr.responseText;
+        sonucGoster.innerHTML = xhr.responseText;
       }
     }
 
@@ -873,6 +880,12 @@
     }
 
     #soruIndex{
+      font-weight:bold;
+    }
+
+    #sonucGoster{
+      font-size:12pt;
+      color:#202327;
       font-weight:bold;
     }
 
