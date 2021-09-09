@@ -57,4 +57,13 @@ public class KokluSayi {
     public void setIsaret(boolean isaret) {
         this.isaret = isaret;
     }
+
+    @Override
+    public String toString() {
+        return "KokluSayi{" +
+                "kokDerecesi=" + kokDerecesi +
+                ", kokIciDeger=" + kokIciDeger +
+                ", katsayi=" + katsayi +
+                '}';
+    }
 }

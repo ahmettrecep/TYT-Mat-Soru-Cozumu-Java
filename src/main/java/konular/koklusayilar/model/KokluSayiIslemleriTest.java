@@ -21,11 +21,6 @@ public class KokluSayiIslemleriTest extends KokluSayiIslemleriImpl {
         KokluSayi kokluSayi4 = new KokluSayi(2, 18, 1);
         KokluSayi kokluSayi5 = new KokluSayi(2, 20, 1);
         KokluSayi kokluSayi6 = new KokluSayi(2, 27, 1);
-        KokluSayi kokluSayi7 = new KokluSayi(2, 32, 1);
-        KokluSayi kokluSayi8 = new KokluSayi(2, 18, 1);
-
-        KokluSayi kokluSayi9 = new KokluSayi(2, 1029, 1);
-        KokluSayi kokluSayi10 = new KokluSayi(2, 21, 1);
         List<KokluSayi> sayilar = new LinkedList<KokluSayi>();
         sayilar.add(kokluSayi1);
         sayilar.add(kokluSayi2);
@@ -33,10 +28,6 @@ public class KokluSayiIslemleriTest extends KokluSayiIslemleriImpl {
         sayilar.add(kokluSayi4);
         sayilar.add(kokluSayi5);
         sayilar.add(kokluSayi6);
-        sayilar.add(kokluSayi7);
-        sayilar.add(kokluSayi8);
-        sayilar.add(kokluSayi9);
-        sayilar.add(kokluSayi10);
 
         Map<KokluSayi, KokluSayi> sonuc = islemler.ikiBinYirmiSorusu(sayilar);
         System.out.println("sonuc bos mu : " + sonuc.isEmpty());
@@ -48,6 +39,17 @@ public class KokluSayiIslemleriTest extends KokluSayiIslemleriImpl {
         // 2020 sorusu test
         //
         //
+
+        KokluSayi bir = new KokluSayi(2, 8, 1);
+        KokluSayi iki = new KokluSayi(2, 2, 1);
+        KokluSayi dondur = islemler.dortIslem(bir,iki,'-');
+
+        System.out.println("****** Çıkarma İşlemi Testi ******");
+        System.out.println(dondur.getKokDerecesi() + " / " + dondur.getKatsayi() + " / " + dondur.getKokIciDeger());
+        KokluSayi otuzIki = new KokluSayi(2, 32, 1);
+        islemler.kokluSayininEnSadeHaliniHesapla(otuzIki);
+        System.out.println("***** Sadeleştirme Test *****");
+        System.out.println(otuzIki.getKokDerecesi() + " / " + otuzIki.getKatsayi() + " / " + otuzIki.getKokIciDeger());
 
         // Sadeleştirme Çalışıyor mu TEst
         /*KokluSayi kokluSayi = new KokluSayi(2,128, 2);

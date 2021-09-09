@@ -26,6 +26,9 @@ public class KokluSayiIslemleriImpl implements KokluSayiIslemleri {
         boolean kokDerece = sayilarinKokDerecesiEsitMi(kokluSayi1,kokluSayi2);
         boolean derece = sayilarinDerecesiEsitMi(kokluSayi1,kokluSayi2);
         KokluSayi sonucKokluSayi = new KokluSayi();
+        //******************Alt 2 satır yeni oluşturuldu***************
+        kokluSayi1 = kokluSayininEnSadeHaliniHesapla(kokluSayi1);
+        kokluSayi2 = kokluSayininEnSadeHaliniHesapla(kokluSayi2);
         if((operator == '+' || operator == '-') && kokDerece){
             sonucKokluSayi.setKokDerecesi(kokluSayi1.getKokDerecesi());
             sonucKokluSayi.setKokIciDeger(kokluSayi1.getKokIciDeger());
