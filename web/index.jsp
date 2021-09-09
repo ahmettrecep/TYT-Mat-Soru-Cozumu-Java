@@ -794,15 +794,17 @@
       var span = document.getElementsByClassName("close")[0];
       modal.style.display="block";
       var icerik = document.getElementById("popupIcerik");
-      icerik.textContent = "Bu soruda dikkat etmeniz gereken nokta; hangi iki köklü sayının çarpımının tam sayı olduğunu bulmaktır. \n\n\n" +
-              "\tÖrneğin; kök içi değeri 5 olan sayı ile hangi sayıyı çarparsanız tam sayı elde edersiniz? Normalde bu çözümü zihnimizden de yapabiliriz. \n\n\n" +
-              "\tSoruyu anlamak için çözüme bir adım daha yakından bakalım. \n\n\n" +
-              "Kök 5'ten bahsettik. 5 bir asal sayıdır. 5 ile geri kalan sayılardan hangi sayıyı çarparsak 5^2'ni ve diğer asal sayının karesini elde ederiz?" +
-              "20'yi çarpanlarına ayırırsak 5*4 olduğunu ve 4'ü de 2^2(2'nin karesi) şeklinde yazabileceğimizi görürüz. Öyleyse; \n\n\n " +
-              "\t5 ile 20'yi çarparsak 5*5*2*2 elde edeceğiz. Kök dışına da 5*2 çıkacaktır. Çünkü kökün derecesi 2 olarak verilmiş. \n\n\n" +
-              "\tOperatörler tablosu altında da 2020.1 adlı butona bastığınızda sizden 6 adet sayı girmenizi bekleyecektir. Arka planda sorunun çözümü için aynı şekilde yukarıdaki yöntem izlenmektedir.\n\n\n" +
-              "Yani her bir sayıyı diğer tüm sayılarla birer birer çarparak sonucun kök içi değerinin 1 olduğu değerleri aramaktadır. " +
-              "Buyrun deneyelim.";
+      icerik.innerHTML = "<h4>Çözüm</h4>Bu soruda dikkat etmeniz gereken nokta; <b>hangi iki köklü sayının çarpımının tam sayı olduğunu bulmaktır.</b> <br>" +
+              "Örneğin; kök içi değeri 5 olan sayı ile hangi sayıyı çarparsanız tam sayı elde edersiniz? Normalde bu çözümü zihnimizden de yapabiliriz. <br>>" +
+              "Soruyu anlamak için çözüme bir adım daha yakından bakalım." +
+              "Kök 5'ten bahsettik. 5 bir asal sayıdır. 5 ile geri kalan sayılardan hangi sayıyı çarparsak 5^2'ni ve diğer asal sayının karesini elde ederiz? " +
+              "20'yi çarpanlarına ayırırsak 5*4 olduğunu ve 4'ü de 2^2(2'nin karesi) şeklinde yazabileceğimizi görürüz. Öyleyse; <br> " +
+              "5 ile 20'yi çarparsak 5*5*2*2 elde edeceğiz. Kök dışına da 5*2 çıkacaktır. Çünkü kökün derecesi 2 olarak verilmiş. " +
+              "Operatörler tablosu altında da 2020.1 adlı butona bastığınızda sizden 6 adet sayı girmenizi bekleyecektir. Arka planda sorunun çözümü için aynı şekilde yukarıdaki yöntem izlenmektedir.<br>" +
+              "<b>Yani her bir sayıyı diğer tüm sayılarla birer birer çarparak sonucun kök içi değerinin 1 olduğu değerleri aramaktadır.</b> <br>" +
+              "Hadi deneyelim.";
+      var ipucu = document.getElementById("ipucu");
+      ipucu.innerHTML = "Tüm sayıların kök dereceleri 2'dir. Yani karekök aranıyor. <br> --> 5 : Asal Sayı <br> -->  " + "8 : 2 * 2 * 2<br>-->  " + "12 : 2 * 2 * 3<br>-->  " + "18 : 2 * 3 * 3<br>-->  " + "20 : 2 * 2 * 5<br>-->  " + "27 : 3 * 3 * 3";
     }
 
   </script>
@@ -945,7 +947,9 @@
         <table class="table table-sm table-dark">
           <thead align="center">
           <tr>
-            <th class="bg-warning" scope="col" colspan="4">Aşağıdaki operatörlerden </th>
+            <th class="bg-warning" scope="col" colspan="4">Aşağıdaki operatörlerden soruya uygun olanı seçebilirsiniz.
+              Soru indeksli olanlar dışında diğer operatörler de işlem görmektedir.
+            </th>
           </tr>
           </thead>
           <tbody>
@@ -1004,7 +1008,7 @@
           <tbody>
           <tr>
             <td id="ipucu">
-              Yanda operatorler kısmında
+              Çözümlerle alakalı ipucunu görebilmek için önce en solda soruyu seçmelisin.
             </td>
           </tr>
           </tbody>
