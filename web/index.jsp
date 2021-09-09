@@ -743,7 +743,7 @@
 
       var sonuc = document.getElementById("2020_sonuc");
 
-      let url = '/TYT_Mat_Soru_Cozumu_Java_war_exploded/Servlet/HesaplamaIslemleri';
+      let url = '/TYT_Mat_Soru_Cozumu_Java_war_exploded/Servlet/ikiBinYirmi';
       let xhr = new XMLHttpRequest();
       xhr.open("POST", url, true);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencode");
@@ -787,6 +787,22 @@
         sonuc.readOnly = true
         sonuc.value = xhr.responseText;
       }
+    }
+
+    function popupGoster(){
+      var modal = document.getElementById("myModal");
+      var span = document.getElementsByClassName("close")[0];
+      modal.style.display="block";
+      var icerik = document.getElementById("popupIcerik");
+      icerik.textContent = "Bu soruda dikkat etmeniz gereken nokta; hangi iki köklü sayının çarpımının tam sayı olduğunu bulmaktır. \n\n\n" +
+              "\tÖrneğin; kök içi değeri 5 olan sayı ile hangi sayıyı çarparsanız tam sayı elde edersiniz? Normalde bu çözümü zihnimizden de yapabiliriz. \n\n\n" +
+              "\tSoruyu anlamak için çözüme bir adım daha yakından bakalım. \n\n\n" +
+              "Kök 5'ten bahsettik. 5 bir asal sayıdır. 5 ile geri kalan sayılardan hangi sayıyı çarparsak 5^2'ni ve diğer asal sayının karesini elde ederiz?" +
+              "20'yi çarpanlarına ayırırsak 5*4 olduğunu ve 4'ü de 2^2(2'nin karesi) şeklinde yazabileceğimizi görürüz. Öyleyse; \n\n\n " +
+              "\t5 ile 20'yi çarparsak 5*5*2*2 elde edeceğiz. Kök dışına da 5*2 çıkacaktır. Çünkü kökün derecesi 2 olarak verilmiş. \n\n\n" +
+              "\tOperatörler tablosu altında da 2020.1 adlı butona bastığınızda sizden 6 adet sayı girmenizi bekleyecektir. Arka planda sorunun çözümü için aynı şekilde yukarıdaki yöntem izlenmektedir.\n\n\n" +
+              "Yani her bir sayıyı diğer tüm sayılarla birer birer çarparak sonucun kök içi değerinin 1 olduğu değerleri aramaktadır. " +
+              "Buyrun deneyelim.";
     }
 
   </script>
@@ -851,6 +867,45 @@
       vertical-align: middle;
       font-size:14pt;
     }
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -869,7 +924,7 @@
                   <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"))' value="2017-3" id="soruButon2" class="btn btn-link">2017.3</button></li>
                   <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"))' value="2018-1" id="soruButon3" class="btn btn-link">2018.1</button></li>
                   <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"))' value="2019-1" id="soruButon4" class="btn btn-link">2019.1</button></li>
-                  <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"))' value="2020-1" id="soruButon5" class="btn btn-link">2020.1</button></li>
+                  <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"));popupGoster()' value="2020-1" id="soruButon5" class="btn btn-link">2020.1</button></li>
                   <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"))' value="2021-1" id="soruButon6" class="btn btn-link">2021.1</button></li>
                 </ul>
               </li>
@@ -890,7 +945,7 @@
         <table class="table table-sm table-dark">
           <thead align="center">
           <tr>
-            <th class="bg-warning" scope="col" colspan="4">Operatörler</th>
+            <th class="bg-warning" scope="col" colspan="4">Aşağıdaki operatörlerden </th>
           </tr>
           </thead>
           <tbody>
@@ -926,42 +981,31 @@
         <table class="table table-sm table-dark">
           <thead>
           <tr>
-            <th class="bg-warning" scope="col">Operatör</th>
-            <th class="bg-warning" scope="col">İşlevi</th>
+            <th class="bg-warning" scope="col">Bir Köklü Sayının Anatomisi</th>
           </tr>
           </thead>
           <tbody>
           <tr>
-            <td>+</td>
-            <td>Parametreleri girilen iki köklü sayı arasında toplama işlemi gerçekleştirir.</td>
+            <td align="center"><img src="/TYT_Mat_Soru_Cozumu_Java_war_exploded/assets/anatomi.png" align="center"></td>
           </tr>
           <tr>
-            <td>-</td>
-            <td>Parametreleri girilen iki köklü sayı arasında çıkarma işlemi gerçekleştirir.</td>
+            <td>Yukarıda bir köklü sayının anatomisini görebilirsiniz. Bir köklü sayı 3 temel bileşenden oluşur. Bu bileşenler; <br>
+              <b>1-) Derece        :</b> Bir köklü sayının tam sayı olması için herhangi bir asal sayıdan kaç adet çarpan olması gerektiğini bildirir. Köklü sayının derecesi 2 olduğunda yazılmaz. <br>
+              <b>2-) Katsayı       :</b> Köklü sayı ile çarpım durumundadır. Katsayısı olmayan köklü sayının katsayısı değeri 1'dir. Kök içinden, derece kadar kuvveti sağlayan çarpan kök dışına çıkarılıp, o anki katsayı ile çarpılır.<br>
+              <b>3-) Kök İçi Değer :</b> Kök içinde bulunan sayıdır. <br>
+            </td>
           </tr>
+          </tbody>
+          <thead>
+        <tr>
+          <th class="bg-warning" scope="col">İpucu</th>
+        </tr>
+        </thead>
+          <tbody>
           <tr>
-            <td>/</td>
-            <td>Parametreleri girilen iki köklü sayı arasında bölme işlemi gerçekleştirir.</td>
-          </tr>
-          <tr>
-            <td>*</td>
-            <td>Parametreleri girilen iki köklü sayı arasında çarpma işlemi gerçekleştirir.</td>
-          </tr>
-          <tr>
-            <td>√</td>
-            <td>Bir köklü sayıda, kök içinde bulunan sayının çarpanlarından, kök dışına çıkabilecek olan var ise bu sayıyı dışarı çıkartarak sadeleştirme işlemi yapar.</td>
-          </tr>
-          <tr>
-            <td>0/</td>
-            <td>Bir köklü sayının, sadeleştiğinde tam sayı olup olmadığını hesaplar.(Kök içindeki değer 1'e eşit ise o sayı köklü sayı olmaktan çıkıp tam sayı kabul edilir.)</td>
-          </tr>
-          <tr>
-            <td>^√==</td>
-            <td>Parametreleri girilen iki köklü sayının derecelerinin ve kök içindeki değerlerinin eşit olup olmadığını kontrol eder.<td>
-          </tr>
-          <tr>
-            <td>^==</td>
-            <td>Parametreleri girilen iki köklü sayının sadece derecelerinin eşit olup olmadığını kontrol eder.</td>
+            <td id="ipucu">
+              Yanda operatorler kısmında
+            </td>
           </tr>
           </tbody>
         </table>
@@ -970,8 +1014,20 @@
   </div>
 </div>
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span id="spanx" class="close">&times;</span>
+    <p id="popupIcerik">Some text in the Modal..</p>
+  </div>
+
+</div>
+
 
 <script type="text/javascript">
+
   var toggler = document.getElementsByClassName("caret");
   var i;
 
@@ -985,6 +1041,19 @@
   function kokluSayilarSoruGetir(val){
     var soruUrl = "/TYT_Mat_Soru_Cozumu_Java_war_exploded/assets/";
     document.getElementById("soru").src = soruUrl + val + ".png";
+  }
+</script>
+<script>
+  var modal = document.getElementById("myModal");
+  var span = document.getElementById("spanx");
+  span.onclick = function (){
+    modal.style.display = "none";
+  }
+
+  window.onclick = function (event){
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
   }
 </script>
 </body>
