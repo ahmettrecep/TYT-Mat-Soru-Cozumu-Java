@@ -794,7 +794,7 @@
       var span = document.getElementsByClassName("close")[0];
       modal.style.display="block";
       var icerik = document.getElementById("popupIcerik");
-      icerik.innerHTML = "<h4>Çözüm</h4>Bu soruda dikkat etmeniz gereken nokta; <b>hangi iki köklü sayının çarpımının tam sayı olduğunu bulmaktır.</b> <br>" +
+      icerik.innerHTML = "<h3>Çözüm</h3>Bu soruda dikkat etmeniz gereken nokta; <b>hangi iki köklü sayının çarpımının tam sayı olduğunu bulmaktır.</b> <br>" +
               "Örneğin; kök içi değeri 5 olan sayı ile hangi sayıyı çarparsanız tam sayı elde edersiniz? Normalde bu çözümü zihnimizden de yapabiliriz. <br>>" +
               "Soruyu anlamak için çözüme bir adım daha yakından bakalım." +
               "Kök 5'ten bahsettik. 5 bir asal sayıdır. 5 ile geri kalan sayılardan hangi sayıyı çarparsak 5^2'ni ve diğer asal sayının karesini elde ederiz? " +
@@ -1008,7 +1008,7 @@
           <tbody>
           <tr>
             <td id="ipucu">
-              Çözümlerle alakalı ipucunu görebilmek için önce en solda soruyu seçmelisin.
+              Çözümlerle alakalı ipucunu görebilmek için önce en soldaki sorular menüsünde soruyu seçmelisin.
             </td>
           </tr>
           </tbody>
