@@ -129,19 +129,23 @@ public class KokluSayiIslemleriImpl implements KokluSayiIslemleri {
         List<KokluSayi> sayilarYedekBir = new LinkedList<KokluSayi>();
         List<KokluSayi> sayilarYedekAsil = new LinkedList<KokluSayi>();
         sayilarYedekAsil.addAll(sayilar);
+        int indis = 0;
         int toplam = 0;
-        for(int i=0;i<sayilarYedekAsil.size() / 2;i++){
+        for(int i=0;i<sayilarYedekAsil.size();i++){
+            indis = 0;
             sayilarYedekBir.addAll(sayilarYedekAsil);
             islemdekiKoklu = sayilarYedekAsil.get(i);
             sayilarYedekBir.remove(i);
             int j = 0;
             while(!sayilarYedekBir.isEmpty()){
+                indis++;
                 boolean derecelerEsitMi = sayilarinDerecesiEsitMi(islemdekiKoklu,sayilarYedekBir.get(j));
                 if(derecelerEsitMi){
                     KokluSayi sonucSayisi = dortIslem(islemdekiKoklu, sayilarYedekBir.get(j), '*');
                     //System.out.println(islemdekiKoklu.getKokIciDeger() + " * " + sayilarYedekBir.get(j).getKokIciDeger() + " = " + sonucSayisi.getKokIciDeger());
                     if(sonucSayisi.getKokIciDeger() == 1){
                         sonuc.put(islemdekiKoklu, sayilarYedekBir.get(j));
+                        sayilarYedekAsil.remove(indis);
                     }
                     sayilarYedekBir.remove(j);
                 }
@@ -149,5 +153,20 @@ public class KokluSayiIslemleriImpl implements KokluSayiIslemleri {
         }
 
         return sonuc;
+    }
+
+    public KokluSayi kokluSayininKaresiniAl(KokluSayi kokluSayi){
+        kokluSayi.setKokIciDeger(kokluSayi.getKokIciDeger() * kokluSayi.getKokIciDeger());
+        kokluSayi.setKatsayi(kokluSayi.getKatsayi() * kokluSayi.getKatsayi());
+        kokluSayi = kokluSayininEnSadeHaliniHesapla(kokluSayi);
+        return kokluSayi;
+    }
+
+    public String ikiBinOnYediNoktaIkiSorusu(KokluSayi kokluSayi1, KokluSayi kokluSayi2, KokluSayi kokluSayi3,
+                                             int paydaBir, int paydaIki,int paydaUc){
+
+
+
+        return "";
     }
 }

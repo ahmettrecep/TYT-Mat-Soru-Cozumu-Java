@@ -122,12 +122,13 @@ public class ikiBinYirmi extends HttpServlet {
         KokluSayi temp = null;
         String islemCiktisi = "Sonuc = ";
         for (Map.Entry<KokluSayi,KokluSayi> m : sonuc.entrySet()) {
-            islemCiktisi += m.getKey().getKokIciDeger() + "'nin " + m.getValue().getKokIciDeger() + " ile carpimi; " + "\n";
+            islemCiktisi += m.getKey().getKokIciDeger() + " x " + m.getValue().getKokIciDeger() + " -- " + "\n";
+            System.out.println("Eleman : " + m.getKey().getKokIciDeger() + " x " + m.getValue().getKokIciDeger());
             temp = business.dortIslem(m.getKey(), m.getValue(), '*');
             toplam += temp.getKatsayi();
         }
         islemCiktisi += "tamsayi yapar. Cozumun kilit noktasi sagda, ipucu basligi altinda gorulebilir.";
-        System.out.println(islemCiktisi);
+        System.out.println("islemCiktisi : " + islemCiktisi);
         System.out.println("Toplam : " + toplam);
 
         resp.getWriter().write(islemCiktisi + "\n" + "Toplam : " + toplam);

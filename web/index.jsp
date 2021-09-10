@@ -725,6 +725,7 @@
       hiddenEleman.value = name;
     }
     function ikiBinYirmiSorusuServleteGonder(){
+
       var kokDereceBir = document.getElementById("2020_derece_1");
       var kokKatsayiBir = document.getElementById("2020_katsayi_1");
       var kokIciDegerBir = document.getElementById("2020_kokIciDeger_1");
@@ -798,22 +799,342 @@
       }
     }
 
-    function popupGoster(){
+    function ikiBinOnYediNoktaIkiArayuz(){
+      var satir_1 = document.createElement("div");
+      satir_1.setAttribute("id", grup_no +  "_satir_1");
+      satir_1.setAttribute("class", "row");
+
+      var soruAciklama = document.createElement('div');
+      soruAciklama.setAttribute("class", "row");
+      soruAciklama.setAttribute("id", "soruIndex");
+      soruAciklama.innerHTML += "Aşağıdaki kutulara soruda gördüğünüz değerleri formata uygun yazmalısın. Bunu yaparken sağ üstteki anatomiden faydalanabilirsin.";
+      soruAciklama.style.color = "#ffffff";
+
+      var satir_2 = document.createElement("div");
+      satir_2.setAttribute("id", "satir_2");
+      satir_2.setAttribute("class", "row");
+
+      var satir_2_sutun_1 = document.createElement("div");
+      satir_2_sutun_1.setAttribute("id", "satir_2_sutun_1");
+      satir_2_sutun_1.setAttribute("class", "col");
+
+      var satir_2_sutun_2 = document.createElement("div");
+      satir_2_sutun_2.setAttribute("id", "satir_2_sutun_2");
+      satir_2_sutun_2.setAttribute("class", "col");
+
+      var satir_2_sutun_3 = document.createElement("div");
+      satir_2_sutun_3.setAttribute("id", "satir_2_sutun_3");
+      satir_2_sutun_3.setAttribute("class", "col");
+
+      var satir_2_sutun_4 = document.createElement("div");
+      satir_2_sutun_4.setAttribute("id", "satir_2_sutun_4");
+      satir_2_sutun_4.setAttribute("class", "col");
+
+      var satir_2_sutun_5 = document.createElement("div");
+      satir_2_sutun_5.setAttribute("id", "satir_2_sutun_5");
+      satir_2_sutun_5.setAttribute("class", "col");
+
+      var sonucKutusu = document.createElement("div");
+      sonucKutusu.setAttribute("id", "sonucKutusu");
+      sonucKutusu.setAttribute("class", "row");
+
+      satir_2_sutun_4.innerHTML = "/";
+
+      var kokDerece1 = document.createElement("input");
+      var kokKatsayi1 = document.createElement("input");
+      var kokIciDeger1 = document.createElement("input");
+      var payda1 = document.createElement("input");
+
+      kokDerece1.setAttribute("name", "2017_2_derece_1");
+      kokDerece1.setAttribute("id", "2017_2_derece_1");
+      kokDerece1.setAttribute("class", "form-control");
+      kokDerece1.setAttribute("type", "text");
+      kokDerece1.setAttribute("placeholder", "Kök Derecesi");
+
+      kokIciDeger1.setAttribute("name", "2017_2_kokIciDeger_1");
+      kokIciDeger1.setAttribute("id", "2017_2_kokIciDeger_1");
+      kokIciDeger1.setAttribute("class", "form-control");
+      kokIciDeger1.setAttribute("type", "text");
+      kokIciDeger1.setAttribute("placeholder", "Kök İçi Değer");
+
+      kokKatsayi1.setAttribute("name", "2017_2_katsayi_1");
+      kokKatsayi1.setAttribute("id", "2017_2_katsayi_1");
+      kokKatsayi1.setAttribute("class", "form-control");
+      kokKatsayi1.setAttribute("type", "text");
+      kokKatsayi1.setAttribute("placeholder", "Kök Katsayısı");
+
+      payda1.setAttribute("name", "2017_2_payda_1");
+      payda1.setAttribute("id", "2017_2_payda_1");
+      payda1.setAttribute("class", "form-control");
+      payda1.setAttribute("type", "text");
+      payda1.setAttribute("placeholder", "Payda");
+
+      satir_2_sutun_1.appendChild(kokDerece1);
+      satir_2_sutun_2.appendChild(kokKatsayi1);
+      satir_2_sutun_3.appendChild(kokIciDeger1);
+      satir_2_sutun_5.appendChild(payda1);
+
+      satir_2.appendChild(satir_2_sutun_1);
+      satir_2.appendChild(satir_2_sutun_2);
+      satir_2.appendChild(satir_2_sutun_3);
+      satir_2.appendChild(satir_2_sutun_4);
+      satir_2.appendChild(satir_2_sutun_5);
+
+      /*
+      *
+      * Buradan itibaren aşağısı 2 ve 3 ve sonuc ve butonlar
+      *
+      * */
+
+      var satir_3 = document.createElement("div");
+      satir_3.setAttribute("id", "satir_3");
+      satir_3.setAttribute("class", "row");
+
+      var satir_3_sutun_1 = document.createElement("div");
+      satir_3_sutun_1.setAttribute("id", "satir_3_sutun_1");
+      satir_3_sutun_1.setAttribute("class", "col");
+
+      var satir_3_sutun_2 = document.createElement("div");
+      satir_3_sutun_2.setAttribute("id", "satir_3_sutun_2");
+      satir_3_sutun_2.setAttribute("class", "col");
+
+      var satir_3_sutun_3 = document.createElement("div");
+      satir_3_sutun_3.setAttribute("id", "satir_3_sutun_3");
+      satir_3_sutun_3.setAttribute("class", "col");
+
+      var satir_3_sutun_4 = document.createElement("div");
+      satir_3_sutun_4.setAttribute("id", "satir_3_sutun_4");
+      satir_3_sutun_4.setAttribute("class", "col");
+
+      var satir_3_sutun_5 = document.createElement("div");
+      satir_3_sutun_5.setAttribute("id", "satir_3_sutun_5");
+      satir_3_sutun_5.setAttribute("class", "col");
+
+      satir_3_sutun_4.innerHTML = "/";
+
+      var kokDerece2 = document.createElement("input");
+      var kokKatsayi2 = document.createElement("input");
+      var kokIciDeger2 = document.createElement("input");
+      var payda2 = document.createElement("input");
+
+      kokDerece2.setAttribute("name", "2017_2_derece_2");
+      kokDerece2.setAttribute("id", "2017_2_derece_2");
+      kokDerece2.setAttribute("class", "form-control");
+      kokDerece2.setAttribute("type", "text");
+      kokDerece2.setAttribute("placeholder", "Kök Derecesi");
+
+      kokIciDeger2.setAttribute("name", "2017_2_kokIciDeger_2");
+      kokIciDeger2.setAttribute("id", "2017_2_kokIciDeger_2");
+      kokIciDeger2.setAttribute("class", "form-control");
+      kokIciDeger2.setAttribute("type", "text");
+      kokIciDeger2.setAttribute("placeholder", "Kök İçi Değer");
+
+      kokKatsayi2.setAttribute("name", "2017_2_katsayi_2");
+      kokKatsayi2.setAttribute("id", "2017_2_katsayi_2");
+      kokKatsayi2.setAttribute("class", "form-control");
+      kokKatsayi2.setAttribute("type", "text");
+      kokKatsayi2.setAttribute("placeholder", "Kök Katsayısı");
+
+      payda2.setAttribute("name", "2017_2_payda_2");
+      payda2.setAttribute("id", "2017_2_payda_2");
+      payda2.setAttribute("class", "form-control");
+      payda2.setAttribute("type", "text");
+      payda2.setAttribute("placeholder", "Payda");
+
+      satir_3_sutun_1.appendChild(kokDerece2);
+      satir_3_sutun_2.appendChild(kokKatsayi2);
+      satir_3_sutun_3.appendChild(kokIciDeger2);
+      satir_3_sutun_5.appendChild(payda2);
+
+      satir_3.appendChild(satir_3_sutun_1);
+      satir_3.appendChild(satir_3_sutun_2);
+      satir_3.appendChild(satir_3_sutun_3);
+      satir_3.appendChild(satir_3_sutun_4);
+      satir_3.appendChild(satir_3_sutun_5);
+
+      /*
+      *
+      * 3. sayı başlangıç
+      *
+      */
+
+      var satir_4 = document.createElement("div");
+      satir_4.setAttribute("id", "satir_4");
+      satir_4.setAttribute("class", "row");
+
+      var satir_4_sutun_1 = document.createElement("div");
+      satir_4_sutun_1.setAttribute("id", "satir_4_sutun_1");
+      satir_4_sutun_1.setAttribute("class", "col");
+
+      var satir_4_sutun_2 = document.createElement("div");
+      satir_4_sutun_2.setAttribute("id", "satir_4_sutun_2");
+      satir_4_sutun_2.setAttribute("class", "col");
+
+      var satir_4_sutun_3 = document.createElement("div");
+      satir_4_sutun_3.setAttribute("id", "satir_4_sutun_3");
+      satir_4_sutun_3.setAttribute("class", "col");
+
+      var satir_4_sutun_4 = document.createElement("div");
+      satir_4_sutun_4.setAttribute("id", "satir_4_sutun_4");
+      satir_4_sutun_4.setAttribute("class", "col");
+
+      var satir_4_sutun_5 = document.createElement("div");
+      satir_4_sutun_5.setAttribute("id", "satir_4_sutun_5");
+      satir_4_sutun_5.setAttribute("class", "col");
+
+      satir_4_sutun_4.innerHTML = "/";
+
+      var kokDerece3 = document.createElement("input");
+      var kokKatsayi3 = document.createElement("input");
+      var kokIciDeger3 = document.createElement("input");
+      var payda3 = document.createElement("input");
+
+      kokDerece3.setAttribute("name", "2017_2_derece_3");
+      kokDerece3.setAttribute("id", "2017_2_derece_3");
+      kokDerece3.setAttribute("class", "form-control");
+      kokDerece3.setAttribute("type", "text");
+      kokDerece3.setAttribute("placeholder", "Kök Derecesi");
+
+      kokIciDeger3.setAttribute("name", "2017_2_kokIciDeger_2");
+      kokIciDeger3.setAttribute("id", "2017_2_kokIciDeger_2");
+      kokIciDeger3.setAttribute("class", "form-control");
+      kokIciDeger3.setAttribute("type", "text");
+      kokIciDeger3.setAttribute("placeholder", "Kök İçi Değer");
+
+      kokKatsayi3.setAttribute("name", "2017_2_katsayi_2");
+      kokKatsayi3.setAttribute("id", "2017_2_katsayi_2");
+      kokKatsayi3.setAttribute("class", "form-control");
+      kokKatsayi3.setAttribute("type", "text");
+      kokKatsayi3.setAttribute("placeholder", "Kök Katsayısı");
+
+      payda3.setAttribute("name", "2017_2_payda_2");
+      payda3.setAttribute("id", "2017_2_payda_2");
+      payda3.setAttribute("class", "form-control");
+      payda3.setAttribute("type", "text");
+      payda3.setAttribute("placeholder", "Payda");
+
+      satir_4_sutun_1.appendChild(kokDerece3);
+      satir_4_sutun_2.appendChild(kokKatsayi3);
+      satir_4_sutun_3.appendChild(kokIciDeger3);
+      satir_4_sutun_5.appendChild(payda3);
+
+      satir_4.appendChild(satir_4_sutun_1);
+      satir_4.appendChild(satir_4_sutun_2);
+      satir_4.appendChild(satir_4_sutun_3);
+      satir_4.appendChild(satir_4_sutun_4);
+      satir_4.appendChild(satir_4_sutun_5);
+
+      /*
+      *
+      * Butonlar
+      *
+      * */
+
+      var satir_5 = document.createElement("div");
+      satir_5.setAttribute("id", "satir_5");
+      satir_5.setAttribute("class", "row");
+
+      var satir_5_sutun_1 = document.createElement("div");
+      satir_5_sutun_1.setAttribute("id", "satir_5_sutun_1");
+      satir_5_sutun_1.setAttribute("class", "col");
+
+      var satir_5_sutun_2 = document.createElement("div");
+      satir_5_sutun_2.setAttribute("id", "satir_5_sutun_2");
+      satir_5_sutun_2.setAttribute("class", "col");
+
+      var satir_5_sutun_3 = document.createElement("div");
+      satir_5_sutun_3.setAttribute("id", "satir_5_sutun_3");
+      satir_5_sutun_3.setAttribute("class", "col");
+
+
+      var sonucInput = document.createElement("INPUT");
+      sonucInput.setAttribute("class", "form-control");
+      sonucInput.setAttribute("name","2017_2_sonuc");
+      sonucInput.setAttribute("id","2020_sonuc");
+      sonucInput.setAttribute("placeholder", "Sonuç");
+
+      var silButon = document.createElement("BUTTON");
+      silButon.setAttribute("class", "btn btn-danger");
+      silButon.setAttribute("name", grup_no + "_silButon");
+      silButon.textContent = "Grubu Sil";
+      silButon.setAttribute("onclick", 'silButonununGrupNosunuGetir(this.getAttribute("name"))');
+
+
+      var hesaplaButon = document.createElement("BUTTON");
+      hesaplaButon.setAttribute("class", "btn btn-success");
+      hesaplaButon.setAttribute("type", "button");
+      hesaplaButon.setAttribute("name", grup_no + "_hesaplaButon");
+      hesaplaButon.setAttribute("id", grup_no + "_hesaplaButon");
+      hesaplaButon.setAttribute("onclick", 'ikiBinYirmiSorusuServleteGonder()');
+      hesaplaButon.textContent = "Hesapla";
+
+      soruAciklama.style.fontSize = '12pt';
+      satir_1.style.marginTop = '30px';
+      satir_2.style.marginTop = '10px';
+      satir_3.style.marginTop = '10px';
+      satir_4.style.marginTop = '10px';
+      satir_5.style.marginTop = '10px';
+
+      satir_1.style.backgroundColor = "#18A2D9";
+      satir_1.style.padding = "10px";
+      satir_1.style.borderRadius = "2em";
+
+
+      satir_5_sutun_1.appendChild(sonucInput);
+      satir_5_sutun_2.appendChild(silButon);
+      satir_5_sutun_3.appendChild(hesaplaButon);
+
+      satir_5.appendChild(satir_5_sutun_1);
+      satir_5.appendChild(satir_5_sutun_2);
+      satir_5.appendChild(satir_5_sutun_3);
+
+      satir_1.appendChild(soruAciklama);
+      satir_1.appendChild(satir_2);
+      satir_1.appendChild(satir_3);
+      satir_1.appendChild(satir_4);
+      satir_1.appendChild(satir_5);
+      satir_1.appendChild(sonucKutusu);
+
+      var formId = document.getElementById("sayilarForm");
+      formId.appendChild(satir_1);
+
+    }
+
+    function ikiBinOnYediNoktaIkiSorusuServleteGonder(){
+
+    }
+
+    function popupGoster(soruNumarasi){
       var modal = document.getElementById("myModal");
       var span = document.getElementsByClassName("close")[0];
       modal.style.display="block";
       var icerik = document.getElementById("popupIcerik");
-      icerik.innerHTML = "<h3>Dikkat!</h3>Bu soruda dikkat etmeniz gereken nokta; <b>hangi iki köklü sayının çarpımının tam sayı olduğunu bulmaktır.</b> <br>" +
-              "Örneğin; kök içi değeri 5 olan sayı ile hangi sayıyı çarparsanız tam sayı elde edersiniz? Normalde bu çözümü zihnimizden de yapabiliriz. <br>>" +
-              "Soruyu anlamak için çözüme bir adım daha yakından bakalım." +
-              "Kök 5'ten bahsettik. 5 bir asal sayıdır. 5 ile geri kalan sayılardan hangi sayıyı çarparsak 5^2'ni ve diğer asal sayının karesini elde ederiz? " +
-              "20'yi çarpanlarına ayırırsak 5*4 olduğunu ve 4'ü de 2^2(2'nin karesi) şeklinde yazabileceğimizi görürüz. Yani 20'nin kök dışına çıkabilmesi için bir adet 5 çarpanı eksik görünüyor. Öyleyse; <br> " +
-              "5 ile 20'yi çarparsak 5*5*2*2 elde edeceğiz. Kök dışına da 5*2 çıkacaktır. Çünkü kökün derecesi 2 olarak verilmiş. " +
-              "Operatörler tablosu altında da 2020.1 adlı butona bastığınızda sizden 6 adet sayı girmenizi bekleyecektir. Arka planda sorunun çözümü için aynı şekilde yukarıdaki yöntem izlenmektedir.<br>" +
-              "<b>Yani her bir sayıyı diğer tüm sayılarla birer birer çarparak sonucun kök içi değerinin 1 olduğu değerleri aramaktadır.</b> <br>" +
-              "Hadi deneyelim.";
       var ipucu = document.getElementById("ipucu");
-      ipucu.innerHTML = "Tüm sayıların kök dereceleri 2'dir. Yani karekök aranıyor. <br> --> 5 : Asal Sayı <br> -->  " + "8 : 2 * 2 * 2<br>-->  " + "12 : 2 * 2 * 3<br>-->  " + "18 : 2 * 3 * 3<br>-->  " + "20 : 2 * 2 * 5<br>-->  " + "27 : 3 * 3 * 3";
+      if(soruNumarasi == "2020-1") {
+        icerik.innerHTML = "<h3>Dikkat! Sayıların Asal Çarpanlarının Adedi, Kökün Derecesinin Kuvvetleri Kadar Olmalıdır!</h3>Bu soruda dikkat etmeniz gereken nokta; <b>hangi iki köklü sayının çarpımının tam sayı olduğunu bulmaktır.</b> <br>" +
+                "Örneğin; kök içi değeri 5 olan sayı ile hangi sayıyı çarparsanız tam sayı elde edersiniz? Normalde bu çözümü zihnimizden de yapabiliriz. <br>>" +
+                "Soruyu anlamak için çözüme bir adım daha yakından bakalım." +
+                "Kök 5'ten bahsettik. 5 bir asal sayıdır. 5 ile geri kalan sayılardan hangi sayıyı çarparsak 5^2'ni ve diğer asal sayının karesini elde ederiz? " +
+                "20'yi çarpanlarına ayırırsak 5*4 olduğunu ve 4'ü de 2^2(2'nin karesi) şeklinde yazabileceğimizi görürüz. Yani 20'nin kök dışına çıkabilmesi için bir adet 5 çarpanı eksik görünüyor. Öyleyse; <br> " +
+                "5 ile 20'yi çarparsak 5*5*2*2 elde edeceğiz. Kök dışına da 5*2 çıkacaktır. Çünkü kökün derecesi 2 olarak verilmiş. " +
+                "Operatörler tablosu altında da 2020.1 adlı butona bastığınızda sizden 6 adet sayı girmenizi bekleyecektir. Arka planda sorunun çözümü için aynı şekilde yukarıdaki yöntem izlenmektedir.<br>" +
+                "<b>Yani her bir sayıyı diğer tüm sayılarla birer birer çarparak sonucun kök içi değerinin 1 olduğu değerleri aramaktadır.</b> <br>" +
+                "<b>Soruyu okuduktan sonra sağdaki ipucu başlığına göz atman faydalı olacaktır.</b><br>" +
+                "<b>Hadi deneyelim.</b>";
+        ipucu.innerHTML = "Tüm sayıların kök dereceleri 2'dir. Yani karekök aranıyor. <br> --> 5 : Asal Sayı <br> -->  " + "8 : 2 * 2 * 2<br>-->  " + "12 : 2 * 2 * 3<br>-->  " + "18 : 2 * 3 * 3<br>-->  " + "20 : 2 * 2 * 5<br>-->  " + "27 : 3 * 3 * 3";
+      }
+      else if(soruNumarasi == "2017-2"){
+        icerik.innerHTML = "<h3>Dikkat! Kökten Kurtarmak İçin Kök Derecesi Kadar Kuvvet Alabilirsin!</h3> Soruya şöyle bir baktığımızda birbirinden çok farklı sayılar görürüz. Pay kısmında farklı değerlere sahip köklü sayılar var ve payda değerleri de birbirinden farklı görünüyor." +
+                "Peki burada bu sayıları daha kolay bir tipe nasıl dönüştürebiliriz? Pay değerlerinin karekök içinde olduğu aşikar. Dolayısıyla kökten kurtarmamız gerekir. Öyleyse;<br>" +
+                "<b>a,b ve c sayılarının hepsinin karesini alırsak paylarını kökten kurtarmış oluruz ve hepsini ondalıklı sayılar tipinde karşılaştırabiliriz.</b> Böylece işlemlerimiz kolaylaşır.<br>" +
+                "Karekök içindeki bir sayının karesini alırsak kökten kurtulur ve dışarıya kendisi olduğu gibi çıkar. Paydanın karesini aldığımızda ise kök içinde olmadığı için direkt kendisiyle çarpmış oluruz.<br>" +
+                "Artık elimizde daha net değerler var. Geriye sadece sıralamak kaldı.<br>" +
+                "<b>Soruyu okuduktan sonra sağdaki ipucu başlığına göz atman faydalı olacaktır.</b><br>" +
+                "<b>Hadi deneyelim.</b>";
+        ipucu.innerHTML = "Burada kök derecesinin 2 olduğunu görüyoruz. Öyleyse kökten kurtarmak için sayının karesini alabiliriz. Yani a^2, b^2 ve c^2 yapacağız. Sonrasında elimizde kökten kurtulmuş 3 adet sayı olacak. <b>Altın kural; tüm sayıları aynı işleme tabii tutarsan, birbirlerine olan oranları değişmez</b>";
+      }
+
+
     }
 
   </script>
@@ -941,11 +1262,11 @@
               <li><span class="caret">Köklü Sayılar</span>
                 <ul class="nested">
                   <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"))' value="2017-1" id="soruButon0" class="btn btn-link">2017.1</button></li>
-                  <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"))' value="2017-2" id="soruButon1" class="btn btn-link">2017.2</button></li>
+                  <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"));popupGoster(this.getAttribute("value"));ikiBinOnYediNoktaIkiArayuz()' value="2017-2" id="soruButon1" class="btn btn-link">2017.2</button></li>
                   <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"))' value="2017-3" id="soruButon2" class="btn btn-link">2017.3</button></li>
                   <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"))' value="2018-1" id="soruButon3" class="btn btn-link">2018.1</button></li>
                   <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"))' value="2019-1" id="soruButon4" class="btn btn-link">2019.1</button></li>
-                  <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"));popupGoster()' value="2020-1" id="soruButon5" class="btn btn-link">2020.1</button></li>
+                  <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"));popupGoster(this.getAttribute("value"));ikiBinYirmiNoktaBir()' value="2020-1" id="soruButon5" class="btn btn-link">2020.1</button></li>
                   <li><button onclick='kokluSayilarSoruGetir(this.getAttribute("value"))' value="2021-1" id="soruButon6" class="btn btn-link">2021.1</button></li>
                 </ul>
               </li>
@@ -986,6 +1307,7 @@
           </tr>
           <tr>
             <td><button type="button" onclick='ikiBinYirmiNoktaBir()' class="btn btn-primary" value="2020.1">2020.1</button></td>
+            <td><button type="button" onclick='ikiBinYirmiNoktaBir()' class="btn btn-primary" value="2017.2">2017.2</button></td>
           </tr>
           </tbody>
         </table>
