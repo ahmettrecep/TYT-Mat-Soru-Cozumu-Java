@@ -27,4 +27,13 @@ function popupGoster(soruNumarasi){
             "<b>Hadi deneyelim.</b>";
         ipucu.innerHTML = "Burada kök derecesinin 2 olduğunu görüyoruz. Öyleyse kökten kurtarmak için sayının karesini alabiliriz. Yani a^2, b^2 ve c^2 yapacağız. Sonrasında elimizde kökten kurtulmuş 3 adet sayı olacak. <b>Altın kural; tüm sayıları aynı işleme tabii tutarsan, birbirlerine olan oranları değişmez</b>";
     }
+    else if(soruNumarasi == "sorularflash"){
+        icerik.innerHTML = "<h2>Soruları <b>Sol Bölümden</b> Seçiyoruz.</h2>";
+    }
+    else if(soruNumarasi == "gorselflash"){
+        icerik.innerHTML = "<h2>Sorulara Ait Bilgilere ve Çözümlere <b>Orta Bölümden</b> Bakıyoruz.</h2>";
+    }
+    else if(soruNumarasi == "tanimflash"){
+        icerik.innerHTML = "<h2>Köklü Sayılar Hakkında Yardımcı Bilgilere ve Soru İpuçlarına <b>Sağ Bölümden</b> Bakıyoruz.</h2>";
+    }
 }

@@ -72,9 +72,9 @@ function ikiBinYirmiSorusuServleteGonder(){
         sonucGoster.innerHTML = "<br><h3>Çözüm</h3><p> Çözümü anlamaya başlarken öncelikle sağda gördüğün ipucu " +
             "başlığı altına bakabilirsin. Baktıysan devam edelim. Gördüğümüz üzere, çarpma işleminin sonucunun tamsayı olması için " +
             "her çarpandan 2'nin kuvveti kadar olmalıdır. Örneğin;<br><center><i>8 x 18</i></center><br> işlemini ele alalım.<br>" +
-            "<br><center><i>8'in çarpanları 2 * 2 * 2</i></center><br><center>ve</center><br><center><i>18'in çarpanları 2 * 3 * 3'tür</i></center>.<br>" +
-            " 8 ile 18'i çarparsak; (2 * 2 * 2 * 2) * 3 * 3 olduğu görülür. Dolayısıyla; " +
-            "Kök dışına 2 * 2 * 3 olarak çıkacaktır. Bu da 12 demektir. Diğer sayılar için de aynı çözüm geçerlidir.<br><b>" + xhr.responseText + "</b>";
+            "<br><center><i>8'in çarpanları 2 x 2 x 2</i></center><br><center>ve</center><br><center><i>18'in çarpanları 2 x 3 x 3'tür</i></center>.<br>" +
+            " 8 ile 18'i çarparsak; (2 x 2 x 2 x 2) x 3 x 3 olduğu görülür. Dolayısıyla; " +
+            "Kök dışına 2 x 2 x 3 olarak çıkacaktır. Bu da 12 demektir. Diğer sayılar için de aynı çözüm geçerlidir.<br><b>" + xhr.responseText + "</b>";
 
         scroll(0, 1000);
     }

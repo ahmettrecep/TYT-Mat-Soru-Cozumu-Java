@@ -101,7 +101,7 @@
 
     <div class="col-sm" id="uc">
       <div class="row">
-        <table class="table table-sm table-dark">
+        <table class="table table-sm table-dark" id="ucTable">
           <thead>
           <tr>
             <th class="bg-warning" scope="col">Bir Köklü Sayının Anatomisi</th>
@@ -179,6 +179,138 @@
     }
   }
 
+
+  /*
+  *
+  * Kontrol Edilmesi Gerekiyor.
+  *
+  * */
+
+  $(document).ready(function(){
+    setTimeout(function () {
+      flashWhiteIlk();
+    }, 500);
+    setTimeout(function () {
+      flashWhiteIlk();
+    }, 1001);
+    setTimeout(function () {
+      flashWhiteIlk();
+    }, 1502);
+    setTimeout(function () {
+      flashWhiteIlk();
+    }, 2003);
+    setTimeout(function () {
+      flashWhiteIlk();
+    }, 2504);
+
+    setTimeout(function () {
+      popupGoster("sorularflash");
+    }, 2500);
+
+    var div = document.getElementById("ilk");
+    div.style.backgroundColor = "202327";
+
+
+    setTimeout(function () {
+      flashWhiteIki();
+    }, 6005);
+    setTimeout(function () {
+      flashWhiteIki();
+    }, 6506);
+    setTimeout(function () {
+      flashWhiteIki();
+    }, 7007);
+    setTimeout(function () {
+      flashWhiteIki();
+    }, 7508);
+    setTimeout(function () {
+      flashWhiteIki();
+    }, 8009);
+
+    var div = document.getElementById("iki");
+    div.style.backgroundColor = "202327";
+
+    setTimeout(function () {
+      popupGoster("gorselflash");
+    }, 8005);
+
+
+    setTimeout(function () {
+      flashWhiteUc();
+    }, 11010);
+    setTimeout(function () {
+      flashWhiteUc();
+    }, 11520);
+    setTimeout(function () {
+      flashWhiteUc();
+    }, 12030);
+    setTimeout(function () {
+      flashWhiteUc();
+    }, 12540);
+    setTimeout(function () {
+      flashWhiteUc();
+    }, 13050);
+
+    var div = document.getElementById("ucTable");
+    div.style.backgroundColor = "202327";
+
+    setTimeout(function () {
+      popupGoster("tanimflash");
+    }, 13000);
+
+  });
+
+  function flashWhiteIlk() {
+    var div = document.getElementById("ilk");
+    var originalColor = getComputedStyle(div).backgroundColor;
+
+    div.style.backgroundColor = "white";
+
+    for (let i = 0; i < 3; i++) {
+
+      setTimeout(function () {
+        div.style.backgroundColor = originalColor;
+
+        var divIki = document.getElementById("iki");
+        divIki.style.backgroundColor = "202327";
+        var divUc = document.getElementById("ucTable");
+        divUc.style.backgroundColor = "202327";
+      }, 500);
+    }
+  }
+  function flashWhiteIki() {
+    var div = document.getElementById("iki");
+    var originalColor = getComputedStyle(div).backgroundColor;
+
+    div.style.backgroundColor = "white";
+
+    for (let i = 0; i < 3; i++) {
+
+      setTimeout(function () {
+        div.style.backgroundColor = originalColor;
+        var divIki = document.getElementById("ilk");
+        divIki.style.backgroundColor = "202327";
+        var divUc = document.getElementById("ucTable");
+        divUc.style.backgroundColor = "202327";
+      }, 500);
+    }
+  }
+
+  function flashWhiteUc() {
+    var div = document.getElementById("ucTable");
+    div.className = "table table-sm table-light";
+
+    for (let i = 0; i < 3; i++) {
+
+      setTimeout(function () {
+        var divIki = document.getElementById("iki");
+        divIki.style.backgroundColor = "202327";
+        var divUc = document.getElementById("ilk");
+        divUc.style.backgroundColor = "202327";
+        div.className = "table table-sm table-dark";
+      }, 500);
+    }
+  }
 </script>
 </body>
 </html>
