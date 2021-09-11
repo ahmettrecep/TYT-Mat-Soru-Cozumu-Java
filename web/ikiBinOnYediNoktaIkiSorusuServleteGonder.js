@@ -52,8 +52,14 @@ function ikiBinOnYediNoktaIkiSorusuServleteGonder(){
     xhr.onload = function(){
         sonuc.value = xhr.responseText;
         sonuc.readOnly = true;
-        sonucGoster.innerHTML = "<br><h3>Çözüm</h3><p>a, b ve c sayılarının karelerini alıp tamsayı olan paydalarına böleriz." +
-                    " Böylece elimizde birbirlerine göre karşılaştırılabilecek sayılar olur. " +
-                    "Daha sonra karşılaştırmamızı yaparsak;</p><br><center>" + xhr.responseText + "</center><br><p>sonucunu elde ederiz.</p>";
+        sonucGoster.innerHTML = "<br><h3>Çözüm</h3><p>Bu soruda aklımıza gelmesi gereken ilk kural, sağda ipucu tablosunda da görebileceğiniz gibi; " +
+            "elinizde bulunan üç adet sayının üçüne de aynı işlemi uygularsanız, bu sayıların birbirlerine olan oranı değişmez. Bu bilgiden faydalanarak soruyu çözmeye başlayalım.<br>" +
+            "Örnek olarak a sayısını ele alalım. Karekök içindeki bir sayıyı kök dışına çıkarmak istiyorsak karesini almalıyız.(Unutmayalım ki, " +
+            "küpkök içinde bulunan bir sayıyı dışarıya çıkarmak isteseydik küpünü alırdık. Bu durum kökün derecesiyle ilişkilidir. Sağ üstteki anatomi başlıklı tablodan faydalanabilirsin.) " +
+            "Biz de burada a sayısının karesini alalım. Pay kısmında artık kök 2 değil direkt 2 ; paydada ise 4 olacak. 2/4 işleminden, bunun 1/2 = 0.5 olduğunu görebiliriz.<br>" +
+            "Diğer sayılara da aynı işlemi uygulayıp elimizdeki ondalık sayıları karşılaştırarak çözümü bulduk. Sonuç olarak; <br>"  +
+                    "</p><br><center>" + xhr.responseText + "</center><br><p>sonucunu elde ederiz.<br><b>Cevap: C) " + xhr.responseText + "</b></p>";
+
+        scroll(0, 1100);
     }
 }

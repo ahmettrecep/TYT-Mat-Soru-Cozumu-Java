@@ -75,5 +75,7 @@ function ikiBinYirmiSorusuServleteGonder(){
             "<br><center><i>8'in çarpanları 2 * 2 * 2</i></center><br><center>ve</center><br><center><i>18'in çarpanları 2 * 3 * 3'tür</i></center>.<br>" +
             " 8 ile 18'i çarparsak; (2 * 2 * 2 * 2) * 3 * 3 olduğu görülür. Dolayısıyla; " +
             "Kök dışına 2 * 2 * 3 olarak çıkacaktır. Bu da 12 demektir. Diğer sayılar için de aynı çözüm geçerlidir.<br><b>" + xhr.responseText + "</b>";
+
+        scroll(0, 1000);
     }
 }

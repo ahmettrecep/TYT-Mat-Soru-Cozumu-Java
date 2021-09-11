@@ -170,10 +170,6 @@ public class KokluSayiIslemleriImpl implements KokluSayiIslemleri {
         KokluSayi c = soruHaritasi.get("c");
         soruHaritasi.remove("c");
 
-        System.out.println(a.getKokIciDeger());
-        System.out.println(b.getKokIciDeger());
-        System.out.println(c.getKokIciDeger());
-
 
         paydaBir = paydaBir * paydaBir;
         paydaIki = paydaIki * paydaIki;
@@ -195,8 +191,6 @@ public class KokluSayiIslemleriImpl implements KokluSayiIslemleri {
                 .stream()
                 .sorted(Map.Entry.comparingByValue())
                 .forEachOrdered(x -> siraliOlan.put(x.getKey(), x.getValue()));
-
-        System.out.println("Sıralı Liste : " + siraliOlan);
 
         return siraliOlan;
     }
