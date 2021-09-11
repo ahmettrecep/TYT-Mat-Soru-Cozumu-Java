@@ -10,9 +10,7 @@ function ikiBinYirmiNoktaBir(){
     var soruIndex = document.createElement('div');
     soruIndex.setAttribute("class", "row");
     soruIndex.setAttribute("id", "soruIndex");
-    soruIndex.innerHTML += 'Aşağıdaki kutucuklara, yukarıda gördüğünüz sorudaki kareköklü sayılar yazılmalıdır. Sayılar yazarken kullanılacak biçim, sağ üstte gösterilen anatomideki gibidir..<br>' +
-        "Örneğin; Kök 5 sayısının derecesi 2, katsayısı 1, kök içi değeri 5'tir.";
-    soruIndex.style.color = "#ffffff";
+    soruIndex.innerHTML += "<h3>İpucu</h3><p>Köklü sayıları aşağıdaki kutuya yazarken sağ üstteki anatomi bilgisinden faydalanabilirsin.</p>";
 
     //İlk sayının kolon divlerini içeren div
     var satirIki = document.createElement("div");
@@ -364,7 +362,7 @@ function ikiBinYirmiNoktaBir(){
     satirAlti.style.marginTop = '10px';
     satirYedi.style.marginTop = '10px';
 
-    satirBir.style.backgroundColor = "#18A2D9";
+    satirBir.style.backgroundColor = "#3d94ff";
     satirBir.style.padding = "10px";
     satirBir.style.borderRadius = "2em";
 

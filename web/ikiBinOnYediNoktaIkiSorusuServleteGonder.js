@@ -50,10 +50,10 @@ function ikiBinOnYediNoktaIkiSorusuServleteGonder(){
     });
     xhr.send(data);
     xhr.onload = function(){
-        sonuc.readOnly = true
-        sonucGoster.innerHTML = xhr.responseText;
+        sonuc.value = xhr.responseText;
+        sonuc.readOnly = true;
+        sonucGoster.innerHTML = "<br><h3>Çözüm</h3><p>a, b ve c sayılarının karelerini alıp tamsayı olan paydalarına böleriz." +
+                    " Böylece elimizde birbirlerine göre karşılaştırılabilecek sayılar olur. " +
+                    "Daha sonra karşılaştırmamızı yaparsak;</p><br><center>" + xhr.responseText + "</center><br><p>sonucunu elde ederiz.</p>";
     }
-
-
-
 }

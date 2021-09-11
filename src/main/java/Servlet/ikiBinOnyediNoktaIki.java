@@ -1,5 +1,6 @@
 package Servlet;
 
+import com.day.cq.commons.predicate.AbstractNodePredicate;
 import konular.koklusayilar.model.KokluSayi;
 import konular.koklusayilar.model.KokluSayiIslemleriImpl;
 import org.json.JSONArray;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.util.*;
 
 @WebServlet("/Servlet/ikiBinOnyediNoktaIki")
 public class ikiBinOnyediNoktaIki extends HttpServlet {
@@ -70,6 +72,25 @@ public class ikiBinOnyediNoktaIki extends HttpServlet {
         // Veri Sırası Test
         System.out.println(koklusayi_3.getKokDerecesi() + " / " + koklusayi_3.getKatsayi() + " / " + koklusayi_3.getKokIciDeger() + " / " + payda_3);
 
-        String soruCozum = business.ikiBinOnYediNoktaIkiSorusu(koklusayi_1,koklusayi_2,koklusayi_3,payda_1,payda_2,payda_3);
+
+        Map<String, KokluSayi> soruHaritasi = new HashMap<String, KokluSayi>();
+        soruHaritasi.put("a", koklusayi_1);
+        soruHaritasi.put("b", koklusayi_2);
+        soruHaritasi.put("c", koklusayi_3);
+
+        LinkedHashMap<String, Double> siraliListe;
+
+        siraliListe = business.ikiBinOnYediNoktaIkiSorusu(soruHaritasi,payda_1,payda_2,payda_3);
+
+        String sonucResponse = "";
+        int i = 0;
+        for (Map.Entry<String, Double> pair : siraliListe.entrySet()) {
+            sonucResponse += pair.getKey() + " ";
+            i++;
+            if(i<3)
+                sonucResponse += "< ";
+        }
+        System.out.println(sonucResponse);
+        resp.getWriter().write(sonucResponse);
     }
 }

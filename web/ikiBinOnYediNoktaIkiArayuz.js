@@ -6,8 +6,7 @@ function ikiBinOnYediNoktaIkiArayuz(){
     var soruAciklama = document.createElement('div');
     soruAciklama.setAttribute("class", "row");
     soruAciklama.setAttribute("id", "soruIndex");
-    soruAciklama.innerHTML += "Aşağıdaki kutulara soruda gördüğünüz değerleri formata uygun yazmalısın. Bunu yaparken sağ üstteki anatomiden faydalanabilirsin.";
-    soruAciklama.style.color = "#ffffff";
+    soruAciklama.innerHTML += "<h3>İpucu</h3><p>Köklü sayıları aşağıdaki kutuya yazarken sağ üstteki anatomi bilgisinden faydalanabilirsin.</p>";
 
     var satir_2 = document.createElement("div");
     satir_2.setAttribute("id", "satir_2");
@@ -267,17 +266,16 @@ function ikiBinOnYediNoktaIkiArayuz(){
     hesaplaButon.setAttribute("onclick", 'ikiBinOnYediNoktaIkiSorusuServleteGonder()');
     hesaplaButon.textContent = "Hesapla";
 
-    soruAciklama.style.fontSize = '12pt';
     satir_1.style.marginTop = '30px';
     satir_2.style.marginTop = '10px';
     satir_3.style.marginTop = '10px';
     satir_4.style.marginTop = '10px';
     satir_5.style.marginTop = '10px';
-
-    satir_1.style.backgroundColor = "#18A2D9";
-    satir_1.style.padding = "7px";
+    //18A2D9
+    // 7fb2f4
+    satir_1.style.backgroundColor = "#3d94ff";
+    satir_1.style.padding = "10px";
     satir_1.style.borderRadius = "2em";
-
 
     satir_5_sutun_1.appendChild(sonucInput);
     satir_5_sutun_2.appendChild(silButon);

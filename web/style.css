@@ -59,14 +59,33 @@ ul{
     font-size:14pt;
 }
 
-#soruIndex{
+#soruIndex h3{
     font-weight:bold;
+    color:#ffffff;
+}
+#soruIndex{
+    font-size:14pt;
+    color:#ffffff;
+}
+
+#sonucKutusu h3{
+    font-weight:bold;
+    color:#ffffff;
+}
+
+#sonucKutusu{
+    font-size: 14pt;
+    color:#ffffff;
 }
 
 #sonucGoster{
-    font-size:12pt;
-    color:#202327;
+    font-size:14pt;
+    color:#ffffff;
+}
+
+#sonucGoster h3{
     font-weight:bold;
+    color:#ffffff;
 }
 
 /* The Modal (background) */

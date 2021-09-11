@@ -162,39 +162,42 @@ public class KokluSayiIslemleriImpl implements KokluSayiIslemleri {
         return kokluSayi;
     }
 
-    public String ikiBinOnYediNoktaIkiSorusu(KokluSayi kokluSayi1, KokluSayi kokluSayi2, KokluSayi kokluSayi3,
-                                             int paydaBir, int paydaIki,int paydaUc){
-        kokluSayi1 = kokluSayininKaresiniAl(kokluSayi1);
-        kokluSayi2 = kokluSayininKaresiniAl(kokluSayi2);
-        kokluSayi3 = kokluSayininKaresiniAl(kokluSayi3);
+    public LinkedHashMap<String, Double> ikiBinOnYediNoktaIkiSorusu(Map<String, KokluSayi> soruHaritasi, int paydaBir, int paydaIki, int paydaUc){
+        KokluSayi a = soruHaritasi.get("a");
+        soruHaritasi.remove("a");
+        KokluSayi b = soruHaritasi.get("b");
+        soruHaritasi.remove("b");
+        KokluSayi c = soruHaritasi.get("c");
+        soruHaritasi.remove("c");
+
+        System.out.println(a.getKokIciDeger());
+        System.out.println(b.getKokIciDeger());
+        System.out.println(c.getKokIciDeger());
+
 
         paydaBir = paydaBir * paydaBir;
         paydaIki = paydaIki * paydaIki;
         paydaUc = paydaUc * paydaUc;
 
-        System.out.println("****** Köklü Sayıların Karesi ******* ");
-        System.out.println("Birinci Köklü Sayı : " + kokluSayi1.getKatsayi());
-        System.out.println("İkinci Köklü Sayı  : " + kokluSayi2.getKatsayi());
-        System.out.println("Üçüncü Köklü Sayı  :" + kokluSayi3.getKatsayi());
+        a = kokluSayininKaresiniAl(a);
+        b = kokluSayininKaresiniAl(b);
+        c = kokluSayininKaresiniAl(c);
 
-        double[] degerler = new double[3];
+        Map<String, Double> siraliOlmayan = new HashMap<>();
 
-        double deger1 = kokluSayi1.getKatsayi() / paydaBir;
-        double deger2 = kokluSayi2.getKatsayi() / paydaIki;
-        double deger3 = kokluSayi3.getKatsayi() / paydaUc;
+        siraliOlmayan.put("a", a.getKatsayi()/paydaBir);
+        siraliOlmayan.put("b", b.getKatsayi()/paydaIki);
+        siraliOlmayan.put("c", c.getKatsayi()/paydaUc);
 
-        System.out.println("****** Bölüm Sonuçları ******* ");
-        System.out.println(deger1);
-        System.out.println(deger2);
-        System.out.println(deger3);
+        LinkedHashMap<String, Double> siraliOlan = new LinkedHashMap<>();
 
-        degerler[0] = deger1;
-        degerler[1] = deger2;
-        degerler[2] = deger3;
+        siraliOlmayan.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue())
+                .forEachOrdered(x -> siraliOlan.put(x.getKey(), x.getValue()));
 
-        Arrays.sort(degerler);
-        System.out.println(Arrays.toString(degerler));
+        System.out.println("Sıralı Liste : " + siraliOlan);
 
-        return "";
+        return siraliOlan;
     }
 }

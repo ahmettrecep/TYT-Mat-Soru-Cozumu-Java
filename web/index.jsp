@@ -26,10 +26,7 @@
   <script src="ismiGizliyeGonder.js"></script>
   <script src="popUpGoster.js"></script>
   <script src="silButonununGrupNosunuGetir.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <style type="text/css">
-
-  </style>
+  <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
 <div class="container">
@@ -62,7 +59,7 @@
         Çıkmış Soru
         <!-- <img src="assets/2021-1.png" alt="Smiley face" height="42" width="42"> -->
         <!--<input type="image" src="assets/2021-1.png"/> -->
-        <img src="/TYT_Mat_Soru_Cozumu_Java_war_exploded/assets/pen_alt.png" id="soru" class="rounded mx-auto d-block"/>
+        <img src="/TYT_Mat_Soru_Cozumu_Java_war_exploded/assets/alt_image.png" id="soru" class="rounded mx-auto d-block"/>
 
 
         <table class="table table-sm table-dark">
