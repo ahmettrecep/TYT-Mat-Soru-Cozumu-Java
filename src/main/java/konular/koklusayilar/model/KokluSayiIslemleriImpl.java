@@ -164,8 +164,36 @@ public class KokluSayiIslemleriImpl implements KokluSayiIslemleri {
 
     public String ikiBinOnYediNoktaIkiSorusu(KokluSayi kokluSayi1, KokluSayi kokluSayi2, KokluSayi kokluSayi3,
                                              int paydaBir, int paydaIki,int paydaUc){
+        kokluSayi1 = kokluSayininKaresiniAl(kokluSayi1);
+        kokluSayi2 = kokluSayininKaresiniAl(kokluSayi2);
+        kokluSayi3 = kokluSayininKaresiniAl(kokluSayi3);
 
+        paydaBir = paydaBir * paydaBir;
+        paydaIki = paydaIki * paydaIki;
+        paydaUc = paydaUc * paydaUc;
 
+        System.out.println("****** Köklü Sayıların Karesi ******* ");
+        System.out.println("Birinci Köklü Sayı : " + kokluSayi1.getKatsayi());
+        System.out.println("İkinci Köklü Sayı  : " + kokluSayi2.getKatsayi());
+        System.out.println("Üçüncü Köklü Sayı  :" + kokluSayi3.getKatsayi());
+
+        double[] degerler = new double[3];
+
+        double deger1 = kokluSayi1.getKatsayi() / paydaBir;
+        double deger2 = kokluSayi2.getKatsayi() / paydaIki;
+        double deger3 = kokluSayi3.getKatsayi() / paydaUc;
+
+        System.out.println("****** Bölüm Sonuçları ******* ");
+        System.out.println(deger1);
+        System.out.println(deger2);
+        System.out.println(deger3);
+
+        degerler[0] = deger1;
+        degerler[1] = deger2;
+        degerler[2] = deger3;
+
+        Arrays.sort(degerler);
+        System.out.println(Arrays.toString(degerler));
 
         return "";
     }

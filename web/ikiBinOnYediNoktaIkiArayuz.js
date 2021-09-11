@@ -27,11 +27,11 @@ function ikiBinOnYediNoktaIkiArayuz(){
 
     var satir_2_sutun_4 = document.createElement("div");
     satir_2_sutun_4.setAttribute("id", "satir_2_sutun_4");
-    satir_2_sutun_4.setAttribute("class", "col");
+    satir_2_sutun_4.setAttribute("class", "col-sm");
 
     var satir_2_sutun_5 = document.createElement("div");
     satir_2_sutun_5.setAttribute("id", "satir_2_sutun_5");
-    satir_2_sutun_5.setAttribute("class", "col-sm");
+    satir_2_sutun_5.setAttribute("class", "col");
 
     var sonucKutusu = document.createElement("div");
     sonucKutusu.setAttribute("id", "sonucKutusu");
@@ -48,19 +48,19 @@ function ikiBinOnYediNoktaIkiArayuz(){
     kokDerece1.setAttribute("id", "2017_2_derece_1");
     kokDerece1.setAttribute("class", "form-control");
     kokDerece1.setAttribute("type", "text");
-    kokDerece1.setAttribute("placeholder", "Kök Derecesi");
+    kokDerece1.setAttribute("placeholder", "Derece");
 
     kokIciDeger1.setAttribute("name", "2017_2_kokIciDeger_1");
     kokIciDeger1.setAttribute("id", "2017_2_kokIciDeger_1");
     kokIciDeger1.setAttribute("class", "form-control");
     kokIciDeger1.setAttribute("type", "text");
-    kokIciDeger1.setAttribute("placeholder", "Kök İçi Değer");
+    kokIciDeger1.setAttribute("placeholder", "Değer");
 
     kokKatsayi1.setAttribute("name", "2017_2_katsayi_1");
     kokKatsayi1.setAttribute("id", "2017_2_katsayi_1");
     kokKatsayi1.setAttribute("class", "form-control");
     kokKatsayi1.setAttribute("type", "text");
-    kokKatsayi1.setAttribute("placeholder", "Kök Katsayısı");
+    kokKatsayi1.setAttribute("placeholder", "Katsayı");
 
     payda1.setAttribute("name", "2017_2_payda_1");
     payda1.setAttribute("id", "2017_2_payda_1");
@@ -103,11 +103,11 @@ function ikiBinOnYediNoktaIkiArayuz(){
 
     var satir_3_sutun_4 = document.createElement("div");
     satir_3_sutun_4.setAttribute("id", "satir_3_sutun_4");
-    satir_3_sutun_4.setAttribute("class", "col");
+    satir_3_sutun_4.setAttribute("class", "col-sm");
 
     var satir_3_sutun_5 = document.createElement("div");
     satir_3_sutun_5.setAttribute("id", "satir_3_sutun_5");
-    satir_3_sutun_5.setAttribute("class", "col-sm");
+    satir_3_sutun_5.setAttribute("class", "col");
 
     satir_3_sutun_4.innerHTML = "/";
 
@@ -120,19 +120,19 @@ function ikiBinOnYediNoktaIkiArayuz(){
     kokDerece2.setAttribute("id", "2017_2_derece_2");
     kokDerece2.setAttribute("class", "form-control");
     kokDerece2.setAttribute("type", "text");
-    kokDerece2.setAttribute("placeholder", "Kök Derecesi");
+    kokDerece2.setAttribute("placeholder", "Derece");
 
     kokIciDeger2.setAttribute("name", "2017_2_kokIciDeger_2");
     kokIciDeger2.setAttribute("id", "2017_2_kokIciDeger_2");
     kokIciDeger2.setAttribute("class", "form-control");
     kokIciDeger2.setAttribute("type", "text");
-    kokIciDeger2.setAttribute("placeholder", "Kök İçi Değer");
+    kokIciDeger2.setAttribute("placeholder", "Değer");
 
     kokKatsayi2.setAttribute("name", "2017_2_katsayi_2");
     kokKatsayi2.setAttribute("id", "2017_2_katsayi_2");
     kokKatsayi2.setAttribute("class", "form-control");
     kokKatsayi2.setAttribute("type", "text");
-    kokKatsayi2.setAttribute("placeholder", "Kök Katsayısı");
+    kokKatsayi2.setAttribute("placeholder", "Katsayı");
 
     payda2.setAttribute("name", "2017_2_payda_2");
     payda2.setAttribute("id", "2017_2_payda_2");
@@ -175,11 +175,11 @@ function ikiBinOnYediNoktaIkiArayuz(){
 
     var satir_4_sutun_4 = document.createElement("div");
     satir_4_sutun_4.setAttribute("id", "satir_4_sutun_4");
-    satir_4_sutun_4.setAttribute("class", "col");
+    satir_4_sutun_4.setAttribute("class", "col-sm");
 
     var satir_4_sutun_5 = document.createElement("div");
     satir_4_sutun_5.setAttribute("id", "satir_4_sutun_5");
-    satir_4_sutun_5.setAttribute("class", "col-sm");
+    satir_4_sutun_5.setAttribute("class", "col");
 
     satir_4_sutun_4.innerHTML = "/";
 
@@ -192,22 +192,22 @@ function ikiBinOnYediNoktaIkiArayuz(){
     kokDerece3.setAttribute("id", "2017_2_derece_3");
     kokDerece3.setAttribute("class", "form-control");
     kokDerece3.setAttribute("type", "text");
-    kokDerece3.setAttribute("placeholder", "Kök Derecesi");
+    kokDerece3.setAttribute("placeholder", "Derece");
 
-    kokIciDeger3.setAttribute("name", "2017_2_kokIciDeger_2");
-    kokIciDeger3.setAttribute("id", "2017_2_kokIciDeger_2");
+    kokIciDeger3.setAttribute("name", "2017_2_kokIciDeger_3");
+    kokIciDeger3.setAttribute("id", "2017_2_kokIciDeger_3");
     kokIciDeger3.setAttribute("class", "form-control");
     kokIciDeger3.setAttribute("type", "text");
-    kokIciDeger3.setAttribute("placeholder", "Kök İçi Değer");
+    kokIciDeger3.setAttribute("placeholder", "Değer");
 
-    kokKatsayi3.setAttribute("name", "2017_2_katsayi_2");
-    kokKatsayi3.setAttribute("id", "2017_2_katsayi_2");
+    kokKatsayi3.setAttribute("name", "2017_2_katsayi_3");
+    kokKatsayi3.setAttribute("id", "2017_2_katsayi_3");
     kokKatsayi3.setAttribute("class", "form-control");
     kokKatsayi3.setAttribute("type", "text");
-    kokKatsayi3.setAttribute("placeholder", "Kök Katsayısı");
+    kokKatsayi3.setAttribute("placeholder", "Katsayı");
 
-    payda3.setAttribute("name", "2017_2_payda_2");
-    payda3.setAttribute("id", "2017_2_payda_2");
+    payda3.setAttribute("name", "2017_2_payda_3");
+    payda3.setAttribute("id", "2017_2_payda_3");
     payda3.setAttribute("class", "form-control");
     payda3.setAttribute("type", "text");
     payda3.setAttribute("placeholder", "Payda");
@@ -249,7 +249,7 @@ function ikiBinOnYediNoktaIkiArayuz(){
     var sonucInput = document.createElement("INPUT");
     sonucInput.setAttribute("class", "form-control");
     sonucInput.setAttribute("name","2017_2_sonuc");
-    sonucInput.setAttribute("id","2020_sonuc");
+    sonucInput.setAttribute("id","2017_2_sonuc");
     sonucInput.setAttribute("placeholder", "Sonuç");
 
     var silButon = document.createElement("BUTTON");
@@ -264,7 +264,7 @@ function ikiBinOnYediNoktaIkiArayuz(){
     hesaplaButon.setAttribute("type", "button");
     hesaplaButon.setAttribute("name", grup_no + "_hesaplaButon");
     hesaplaButon.setAttribute("id", grup_no + "_hesaplaButon");
-    hesaplaButon.setAttribute("onclick", 'ikiBinYirmiSorusuServleteGonder()');
+    hesaplaButon.setAttribute("onclick", 'ikiBinOnYediNoktaIkiSorusuServleteGonder()');
     hesaplaButon.textContent = "Hesapla";
 
     soruAciklama.style.fontSize = '12pt';
@@ -275,7 +275,7 @@ function ikiBinOnYediNoktaIkiArayuz(){
     satir_5.style.marginTop = '10px';
 
     satir_1.style.backgroundColor = "#18A2D9";
-    satir_1.style.padding = "10px";
+    satir_1.style.padding = "7px";
     satir_1.style.borderRadius = "2em";
 
 
