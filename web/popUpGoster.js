@@ -28,12 +28,12 @@ function popupGoster(soruNumarasi){
         ipucu.innerHTML = "Burada kök derecesinin 2 olduğunu görüyoruz. Öyleyse kökten kurtarmak için sayının karesini alabiliriz. Yani a^2, b^2 ve c^2 yapacağız. Sonrasında elimizde kökten kurtulmuş 3 adet sayı olacak. <b>Altın kural; tüm sayıları aynı işleme tabii tutarsan, birbirlerine olan oranları değişmez</b>";
     }
     else if(soruNumarasi == "sorularflash"){
-        icerik.innerHTML = "<h3>Soruları <b>Sol Bölümden</b> Seçiyoruz.</h3>";
+        icerik.innerHTML = "<h3><b>Soldaki Bölümden</b> Bir Soru Seçerek Başlayabilirsin..</h3>";
     }
     else if(soruNumarasi == "gorselflash"){
-        icerik.innerHTML = "<h3>Seçtiğin Sorulara Ait Bilgilere ve Çözümlere <b>Orta Bölümden</b> Bakıyoruz.</h3>";
+        icerik.innerHTML = "<h3>Seçtiğin Soru <b>Orta Bölümde</b> Açılır. Sorunun Hemen Aşağısında Oluşacak Formda Değerleri Girebilirsin. </h3>";
     }
     else if(soruNumarasi == "tanimflash"){
-        icerik.innerHTML = "<h3>Köklü Sayılar Hakkında Yardımcı Bilgilere ve Soru İpuçlarına <b>Sağ Bölümden</b> Bakıyoruz.</h3>";
+        icerik.innerHTML = "<h3>Köklü Sayılar Hakkında Yardımcı Bilgilere ve Soru İpuçlarına İse <b>Sağdaki Bölümden</b> Ulaşabilirsin.</h3>";
     }
 }

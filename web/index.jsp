@@ -65,8 +65,7 @@
         <table class="table table-sm table-dark">
           <thead align="center">
           <tr>
-            <th class="bg-warning" scope="col" colspan="4">Aşağıdaki operatörlerden soruya uygun olanı seçebilirsiniz.
-              Soru indeksli olanlar dışında diğer operatörler de işlem görmektedir.
+            <th class="bg-warning" scope="col" colspan="4">Bazı sorularda dört işlem gerekebilir. Bu durumlarda aşağıda ilgili butona basarak gerekli operatörü kullanabilirsin.
             </th>
           </tr>
           </thead>
