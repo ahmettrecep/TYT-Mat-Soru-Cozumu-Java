@@ -10,7 +10,10 @@ function ikiBinYirmiNoktaBir(){
     var soruIndex = document.createElement('div');
     soruIndex.setAttribute("class", "row");
     soruIndex.setAttribute("id", "soruIndex");
-    soruIndex.innerHTML += "<h3>İpucu</h3><p>Köklü sayıları aşağıdaki kutuya yazarken sağ üstteki anatomi bilgisinden faydalanabilirsin.</p>";
+    soruIndex.innerHTML += "<center><h3>Soru Formu</h3></center><br><h4>İpucu</h4><p>Değerleri doldurmadan önce soruyu okumalısın. Hangi değerleri yazman gerektiğini sorudan anlayabilirsin.<br>" +
+        "<br>Köklü sayıları yazarken aşağıdaki örnekten ve sağ üstteki anatomi bilgisinden faydalanabilirsin." +
+        "<center><b>7√2= Derece: 2, Katsayı: 7, Değer: 2</b></center><br>" +
+        "Çözümün anahtar bilgisi için sağ tablonun altındaki ipucu başlığına bakabilirsin.</p>";
 
     //İlk sayının kolon divlerini içeren div
     var satirIki = document.createElement("div");
@@ -353,7 +356,6 @@ function ikiBinYirmiNoktaBir(){
 
     satirBir.appendChild(satirYedi);
 
-    soruIndex.style.fontSize = '12pt';
     satirBir.style.marginTop = '30px';
     satirIki.style.marginTop = '10px';
     satirUc.style.marginTop = '10px';
@@ -442,4 +444,10 @@ function ikiBinYirmiNoktaBir(){
 
     var formId = document.getElementById("sayilarForm");
     formId.appendChild(satirBir);
+
+    kaydir();
+}
+
+function kaydir(){
+    window.scrollTo(0,document.body.scrollHeight);
 }

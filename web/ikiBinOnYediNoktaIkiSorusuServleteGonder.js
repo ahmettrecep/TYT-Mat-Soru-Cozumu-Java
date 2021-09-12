@@ -60,6 +60,6 @@ function ikiBinOnYediNoktaIkiSorusuServleteGonder(){
             "Diğer sayılara da aynı işlemi uygulayıp elimizdeki ondalık sayıları karşılaştırarak çözümü bulduk. Sonuç olarak; <br>"  +
                     "</p><br><center>" + xhr.responseText + "</center><br><p>sonucunu elde ederiz.<br><b>Cevap: C) " + xhr.responseText + "</b></p>";
 
-        scroll(0, 1100);
+        window.scrollTo(0,document.body.scrollHeight);
     }
 }

@@ -1,298 +1,308 @@
 function ikiBinOnYediNoktaIkiArayuz(){
-    var satir_1 = document.createElement("div");
-    satir_1.setAttribute("id", grup_no +  "_satir_1");
-    satir_1.setAttribute("class", "row");
 
-    var soruAciklama = document.createElement('div');
-    soruAciklama.setAttribute("class", "row");
-    soruAciklama.setAttribute("id", "soruIndex");
-    soruAciklama.innerHTML += "<h3>İpucu</h3><p>Köklü sayıları aşağıdaki kutuya yazarken sağ üstteki anatomi bilgisinden faydalanabilirsin.</p>";
+        var satir_1 = document.createElement("div");
+        satir_1.setAttribute("id", grup_no + "_satir_1");
+        satir_1.setAttribute("class", "row");
 
-    var satir_2 = document.createElement("div");
-    satir_2.setAttribute("id", "satir_2");
-    satir_2.setAttribute("class", "row");
+        var soruAciklama = document.createElement('div');
+        soruAciklama.setAttribute("class", "row");
+        soruAciklama.setAttribute("id", "soruIndex");
+        soruAciklama.innerHTML += "<center><h3>Soru Formu</h3></center><br><h4>İpucu</h4><p>Değerleri doldurmadan önce soruyu okumalısın. Hangi değerleri yazman gerektiğini sorudan anlayabilirsin.<br>" +
+            "<br>Köklü sayıları yazarken aşağıdaki örnekten ve sağ üstteki anatomi bilgisinden faydalanabilirsin." +
+            "<center><b>7√2= Derece: 2, Katsayı: 7, Değer: 2</b></center><br>" +
+            "Çözümün anahtar bilgisi için sağ tablonun altındaki ipucu başlığına bakabilirsin.</p>";
 
-    var satir_2_sutun_1 = document.createElement("div");
-    satir_2_sutun_1.setAttribute("id", "satir_2_sutun_1");
-    satir_2_sutun_1.setAttribute("class", "col");
+        var satir_2 = document.createElement("div");
+        satir_2.setAttribute("id", "satir_2");
+        satir_2.setAttribute("class", "row");
 
-    var satir_2_sutun_2 = document.createElement("div");
-    satir_2_sutun_2.setAttribute("id", "satir_2_sutun_2");
-    satir_2_sutun_2.setAttribute("class", "col");
+        var satir_2_sutun_1 = document.createElement("div");
+        satir_2_sutun_1.setAttribute("id", "satir_2_sutun_1");
+        satir_2_sutun_1.setAttribute("class", "col");
 
-    var satir_2_sutun_3 = document.createElement("div");
-    satir_2_sutun_3.setAttribute("id", "satir_2_sutun_3");
-    satir_2_sutun_3.setAttribute("class", "col");
+        var satir_2_sutun_2 = document.createElement("div");
+        satir_2_sutun_2.setAttribute("id", "satir_2_sutun_2");
+        satir_2_sutun_2.setAttribute("class", "col");
 
-    var satir_2_sutun_4 = document.createElement("div");
-    satir_2_sutun_4.setAttribute("id", "satir_2_sutun_4");
-    satir_2_sutun_4.setAttribute("class", "col-sm");
+        var satir_2_sutun_3 = document.createElement("div");
+        satir_2_sutun_3.setAttribute("id", "satir_2_sutun_3");
+        satir_2_sutun_3.setAttribute("class", "col");
 
-    var satir_2_sutun_5 = document.createElement("div");
-    satir_2_sutun_5.setAttribute("id", "satir_2_sutun_5");
-    satir_2_sutun_5.setAttribute("class", "col");
+        var satir_2_sutun_4 = document.createElement("div");
+        satir_2_sutun_4.setAttribute("id", "satir_2_sutun_4");
+        satir_2_sutun_4.setAttribute("class", "col-sm");
 
-    var sonucKutusu = document.createElement("div");
-    sonucKutusu.setAttribute("id", "sonucKutusu");
-    sonucKutusu.setAttribute("class", "row");
+        var satir_2_sutun_5 = document.createElement("div");
+        satir_2_sutun_5.setAttribute("id", "satir_2_sutun_5");
+        satir_2_sutun_5.setAttribute("class", "col");
 
-    satir_2_sutun_4.innerHTML = "/";
+        var sonucKutusu = document.createElement("div");
+        sonucKutusu.setAttribute("id", "sonucKutusu");
+        sonucKutusu.setAttribute("class", "row");
 
-    var kokDerece1 = document.createElement("input");
-    var kokKatsayi1 = document.createElement("input");
-    var kokIciDeger1 = document.createElement("input");
-    var payda1 = document.createElement("input");
+        satir_2_sutun_4.innerHTML = "/";
 
-    kokDerece1.setAttribute("name", "2017_2_derece_1");
-    kokDerece1.setAttribute("id", "2017_2_derece_1");
-    kokDerece1.setAttribute("class", "form-control");
-    kokDerece1.setAttribute("type", "text");
-    kokDerece1.setAttribute("placeholder", "Derece");
+        var kokDerece1 = document.createElement("input");
+        var kokKatsayi1 = document.createElement("input");
+        var kokIciDeger1 = document.createElement("input");
+        var payda1 = document.createElement("input");
 
-    kokIciDeger1.setAttribute("name", "2017_2_kokIciDeger_1");
-    kokIciDeger1.setAttribute("id", "2017_2_kokIciDeger_1");
-    kokIciDeger1.setAttribute("class", "form-control");
-    kokIciDeger1.setAttribute("type", "text");
-    kokIciDeger1.setAttribute("placeholder", "Değer");
+        kokDerece1.setAttribute("name", "2017_2_derece_1");
+        kokDerece1.setAttribute("id", "2017_2_derece_1");
+        kokDerece1.setAttribute("class", "form-control");
+        kokDerece1.setAttribute("type", "text");
+        kokDerece1.setAttribute("placeholder", "Derece");
 
-    kokKatsayi1.setAttribute("name", "2017_2_katsayi_1");
-    kokKatsayi1.setAttribute("id", "2017_2_katsayi_1");
-    kokKatsayi1.setAttribute("class", "form-control");
-    kokKatsayi1.setAttribute("type", "text");
-    kokKatsayi1.setAttribute("placeholder", "Katsayı");
+        kokIciDeger1.setAttribute("name", "2017_2_kokIciDeger_1");
+        kokIciDeger1.setAttribute("id", "2017_2_kokIciDeger_1");
+        kokIciDeger1.setAttribute("class", "form-control");
+        kokIciDeger1.setAttribute("type", "text");
+        kokIciDeger1.setAttribute("placeholder", "Değer");
 
-    payda1.setAttribute("name", "2017_2_payda_1");
-    payda1.setAttribute("id", "2017_2_payda_1");
-    payda1.setAttribute("class", "form-control");
-    payda1.setAttribute("type", "text");
-    payda1.setAttribute("placeholder", "Payda");
+        kokKatsayi1.setAttribute("name", "2017_2_katsayi_1");
+        kokKatsayi1.setAttribute("id", "2017_2_katsayi_1");
+        kokKatsayi1.setAttribute("class", "form-control");
+        kokKatsayi1.setAttribute("type", "text");
+        kokKatsayi1.setAttribute("placeholder", "Katsayı");
 
-    satir_2_sutun_1.appendChild(kokDerece1);
-    satir_2_sutun_2.appendChild(kokKatsayi1);
-    satir_2_sutun_3.appendChild(kokIciDeger1);
-    satir_2_sutun_5.appendChild(payda1);
+        payda1.setAttribute("name", "2017_2_payda_1");
+        payda1.setAttribute("id", "2017_2_payda_1");
+        payda1.setAttribute("class", "form-control");
+        payda1.setAttribute("type", "text");
+        payda1.setAttribute("placeholder", "Payda");
 
-    satir_2.appendChild(satir_2_sutun_1);
-    satir_2.appendChild(satir_2_sutun_2);
-    satir_2.appendChild(satir_2_sutun_3);
-    satir_2.appendChild(satir_2_sutun_4);
-    satir_2.appendChild(satir_2_sutun_5);
+        satir_2_sutun_1.appendChild(kokDerece1);
+        satir_2_sutun_2.appendChild(kokKatsayi1);
+        satir_2_sutun_3.appendChild(kokIciDeger1);
+        satir_2_sutun_5.appendChild(payda1);
 
-    /*
-    *
-    * Buradan itibaren aşağısı 2 ve 3 ve sonuc ve butonlar
-    *
-    * */
+        satir_2.appendChild(satir_2_sutun_1);
+        satir_2.appendChild(satir_2_sutun_2);
+        satir_2.appendChild(satir_2_sutun_3);
+        satir_2.appendChild(satir_2_sutun_4);
+        satir_2.appendChild(satir_2_sutun_5);
 
-    var satir_3 = document.createElement("div");
-    satir_3.setAttribute("id", "satir_3");
-    satir_3.setAttribute("class", "row");
+        /*
+        *
+        * Buradan itibaren aşağısı 2 ve 3 ve sonuc ve butonlar
+        *
+        * */
 
-    var satir_3_sutun_1 = document.createElement("div");
-    satir_3_sutun_1.setAttribute("id", "satir_3_sutun_1");
-    satir_3_sutun_1.setAttribute("class", "col");
+        var satir_3 = document.createElement("div");
+        satir_3.setAttribute("id", "satir_3");
+        satir_3.setAttribute("class", "row");
 
-    var satir_3_sutun_2 = document.createElement("div");
-    satir_3_sutun_2.setAttribute("id", "satir_3_sutun_2");
-    satir_3_sutun_2.setAttribute("class", "col");
+        var satir_3_sutun_1 = document.createElement("div");
+        satir_3_sutun_1.setAttribute("id", "satir_3_sutun_1");
+        satir_3_sutun_1.setAttribute("class", "col");
 
-    var satir_3_sutun_3 = document.createElement("div");
-    satir_3_sutun_3.setAttribute("id", "satir_3_sutun_3");
-    satir_3_sutun_3.setAttribute("class", "col");
+        var satir_3_sutun_2 = document.createElement("div");
+        satir_3_sutun_2.setAttribute("id", "satir_3_sutun_2");
+        satir_3_sutun_2.setAttribute("class", "col");
 
-    var satir_3_sutun_4 = document.createElement("div");
-    satir_3_sutun_4.setAttribute("id", "satir_3_sutun_4");
-    satir_3_sutun_4.setAttribute("class", "col-sm");
+        var satir_3_sutun_3 = document.createElement("div");
+        satir_3_sutun_3.setAttribute("id", "satir_3_sutun_3");
+        satir_3_sutun_3.setAttribute("class", "col");
 
-    var satir_3_sutun_5 = document.createElement("div");
-    satir_3_sutun_5.setAttribute("id", "satir_3_sutun_5");
-    satir_3_sutun_5.setAttribute("class", "col");
+        var satir_3_sutun_4 = document.createElement("div");
+        satir_3_sutun_4.setAttribute("id", "satir_3_sutun_4");
+        satir_3_sutun_4.setAttribute("class", "col-sm");
 
-    satir_3_sutun_4.innerHTML = "/";
+        var satir_3_sutun_5 = document.createElement("div");
+        satir_3_sutun_5.setAttribute("id", "satir_3_sutun_5");
+        satir_3_sutun_5.setAttribute("class", "col");
 
-    var kokDerece2 = document.createElement("input");
-    var kokKatsayi2 = document.createElement("input");
-    var kokIciDeger2 = document.createElement("input");
-    var payda2 = document.createElement("input");
+        satir_3_sutun_4.innerHTML = "/";
 
-    kokDerece2.setAttribute("name", "2017_2_derece_2");
-    kokDerece2.setAttribute("id", "2017_2_derece_2");
-    kokDerece2.setAttribute("class", "form-control");
-    kokDerece2.setAttribute("type", "text");
-    kokDerece2.setAttribute("placeholder", "Derece");
+        var kokDerece2 = document.createElement("input");
+        var kokKatsayi2 = document.createElement("input");
+        var kokIciDeger2 = document.createElement("input");
+        var payda2 = document.createElement("input");
 
-    kokIciDeger2.setAttribute("name", "2017_2_kokIciDeger_2");
-    kokIciDeger2.setAttribute("id", "2017_2_kokIciDeger_2");
-    kokIciDeger2.setAttribute("class", "form-control");
-    kokIciDeger2.setAttribute("type", "text");
-    kokIciDeger2.setAttribute("placeholder", "Değer");
+        kokDerece2.setAttribute("name", "2017_2_derece_2");
+        kokDerece2.setAttribute("id", "2017_2_derece_2");
+        kokDerece2.setAttribute("class", "form-control");
+        kokDerece2.setAttribute("type", "text");
+        kokDerece2.setAttribute("placeholder", "Derece");
 
-    kokKatsayi2.setAttribute("name", "2017_2_katsayi_2");
-    kokKatsayi2.setAttribute("id", "2017_2_katsayi_2");
-    kokKatsayi2.setAttribute("class", "form-control");
-    kokKatsayi2.setAttribute("type", "text");
-    kokKatsayi2.setAttribute("placeholder", "Katsayı");
+        kokIciDeger2.setAttribute("name", "2017_2_kokIciDeger_2");
+        kokIciDeger2.setAttribute("id", "2017_2_kokIciDeger_2");
+        kokIciDeger2.setAttribute("class", "form-control");
+        kokIciDeger2.setAttribute("type", "text");
+        kokIciDeger2.setAttribute("placeholder", "Değer");
 
-    payda2.setAttribute("name", "2017_2_payda_2");
-    payda2.setAttribute("id", "2017_2_payda_2");
-    payda2.setAttribute("class", "form-control");
-    payda2.setAttribute("type", "text");
-    payda2.setAttribute("placeholder", "Payda");
+        kokKatsayi2.setAttribute("name", "2017_2_katsayi_2");
+        kokKatsayi2.setAttribute("id", "2017_2_katsayi_2");
+        kokKatsayi2.setAttribute("class", "form-control");
+        kokKatsayi2.setAttribute("type", "text");
+        kokKatsayi2.setAttribute("placeholder", "Katsayı");
 
-    satir_3_sutun_1.appendChild(kokDerece2);
-    satir_3_sutun_2.appendChild(kokKatsayi2);
-    satir_3_sutun_3.appendChild(kokIciDeger2);
-    satir_3_sutun_5.appendChild(payda2);
+        payda2.setAttribute("name", "2017_2_payda_2");
+        payda2.setAttribute("id", "2017_2_payda_2");
+        payda2.setAttribute("class", "form-control");
+        payda2.setAttribute("type", "text");
+        payda2.setAttribute("placeholder", "Payda");
 
-    satir_3.appendChild(satir_3_sutun_1);
-    satir_3.appendChild(satir_3_sutun_2);
-    satir_3.appendChild(satir_3_sutun_3);
-    satir_3.appendChild(satir_3_sutun_4);
-    satir_3.appendChild(satir_3_sutun_5);
+        satir_3_sutun_1.appendChild(kokDerece2);
+        satir_3_sutun_2.appendChild(kokKatsayi2);
+        satir_3_sutun_3.appendChild(kokIciDeger2);
+        satir_3_sutun_5.appendChild(payda2);
 
-    /*
-    *
-    * 3. sayı başlangıç
-    *
-    */
+        satir_3.appendChild(satir_3_sutun_1);
+        satir_3.appendChild(satir_3_sutun_2);
+        satir_3.appendChild(satir_3_sutun_3);
+        satir_3.appendChild(satir_3_sutun_4);
+        satir_3.appendChild(satir_3_sutun_5);
 
-    var satir_4 = document.createElement("div");
-    satir_4.setAttribute("id", "satir_4");
-    satir_4.setAttribute("class", "row");
+        /*
+        *
+        * 3. sayı başlangıç
+        *
+        */
 
-    var satir_4_sutun_1 = document.createElement("div");
-    satir_4_sutun_1.setAttribute("id", "satir_4_sutun_1");
-    satir_4_sutun_1.setAttribute("class", "col");
+        var satir_4 = document.createElement("div");
+        satir_4.setAttribute("id", "satir_4");
+        satir_4.setAttribute("class", "row");
 
-    var satir_4_sutun_2 = document.createElement("div");
-    satir_4_sutun_2.setAttribute("id", "satir_4_sutun_2");
-    satir_4_sutun_2.setAttribute("class", "col");
+        var satir_4_sutun_1 = document.createElement("div");
+        satir_4_sutun_1.setAttribute("id", "satir_4_sutun_1");
+        satir_4_sutun_1.setAttribute("class", "col");
 
-    var satir_4_sutun_3 = document.createElement("div");
-    satir_4_sutun_3.setAttribute("id", "satir_4_sutun_3");
-    satir_4_sutun_3.setAttribute("class", "col");
+        var satir_4_sutun_2 = document.createElement("div");
+        satir_4_sutun_2.setAttribute("id", "satir_4_sutun_2");
+        satir_4_sutun_2.setAttribute("class", "col");
 
-    var satir_4_sutun_4 = document.createElement("div");
-    satir_4_sutun_4.setAttribute("id", "satir_4_sutun_4");
-    satir_4_sutun_4.setAttribute("class", "col-sm");
+        var satir_4_sutun_3 = document.createElement("div");
+        satir_4_sutun_3.setAttribute("id", "satir_4_sutun_3");
+        satir_4_sutun_3.setAttribute("class", "col");
 
-    var satir_4_sutun_5 = document.createElement("div");
-    satir_4_sutun_5.setAttribute("id", "satir_4_sutun_5");
-    satir_4_sutun_5.setAttribute("class", "col");
+        var satir_4_sutun_4 = document.createElement("div");
+        satir_4_sutun_4.setAttribute("id", "satir_4_sutun_4");
+        satir_4_sutun_4.setAttribute("class", "col-sm");
 
-    satir_4_sutun_4.innerHTML = "/";
+        var satir_4_sutun_5 = document.createElement("div");
+        satir_4_sutun_5.setAttribute("id", "satir_4_sutun_5");
+        satir_4_sutun_5.setAttribute("class", "col");
 
-    var kokDerece3 = document.createElement("input");
-    var kokKatsayi3 = document.createElement("input");
-    var kokIciDeger3 = document.createElement("input");
-    var payda3 = document.createElement("input");
+        satir_4_sutun_4.innerHTML = "/";
 
-    kokDerece3.setAttribute("name", "2017_2_derece_3");
-    kokDerece3.setAttribute("id", "2017_2_derece_3");
-    kokDerece3.setAttribute("class", "form-control");
-    kokDerece3.setAttribute("type", "text");
-    kokDerece3.setAttribute("placeholder", "Derece");
+        var kokDerece3 = document.createElement("input");
+        var kokKatsayi3 = document.createElement("input");
+        var kokIciDeger3 = document.createElement("input");
+        var payda3 = document.createElement("input");
 
-    kokIciDeger3.setAttribute("name", "2017_2_kokIciDeger_3");
-    kokIciDeger3.setAttribute("id", "2017_2_kokIciDeger_3");
-    kokIciDeger3.setAttribute("class", "form-control");
-    kokIciDeger3.setAttribute("type", "text");
-    kokIciDeger3.setAttribute("placeholder", "Değer");
+        kokDerece3.setAttribute("name", "2017_2_derece_3");
+        kokDerece3.setAttribute("id", "2017_2_derece_3");
+        kokDerece3.setAttribute("class", "form-control");
+        kokDerece3.setAttribute("type", "text");
+        kokDerece3.setAttribute("placeholder", "Derece");
 
-    kokKatsayi3.setAttribute("name", "2017_2_katsayi_3");
-    kokKatsayi3.setAttribute("id", "2017_2_katsayi_3");
-    kokKatsayi3.setAttribute("class", "form-control");
-    kokKatsayi3.setAttribute("type", "text");
-    kokKatsayi3.setAttribute("placeholder", "Katsayı");
+        kokIciDeger3.setAttribute("name", "2017_2_kokIciDeger_3");
+        kokIciDeger3.setAttribute("id", "2017_2_kokIciDeger_3");
+        kokIciDeger3.setAttribute("class", "form-control");
+        kokIciDeger3.setAttribute("type", "text");
+        kokIciDeger3.setAttribute("placeholder", "Değer");
 
-    payda3.setAttribute("name", "2017_2_payda_3");
-    payda3.setAttribute("id", "2017_2_payda_3");
-    payda3.setAttribute("class", "form-control");
-    payda3.setAttribute("type", "text");
-    payda3.setAttribute("placeholder", "Payda");
+        kokKatsayi3.setAttribute("name", "2017_2_katsayi_3");
+        kokKatsayi3.setAttribute("id", "2017_2_katsayi_3");
+        kokKatsayi3.setAttribute("class", "form-control");
+        kokKatsayi3.setAttribute("type", "text");
+        kokKatsayi3.setAttribute("placeholder", "Katsayı");
 
-    satir_4_sutun_1.appendChild(kokDerece3);
-    satir_4_sutun_2.appendChild(kokKatsayi3);
-    satir_4_sutun_3.appendChild(kokIciDeger3);
-    satir_4_sutun_5.appendChild(payda3);
+        payda3.setAttribute("name", "2017_2_payda_3");
+        payda3.setAttribute("id", "2017_2_payda_3");
+        payda3.setAttribute("class", "form-control");
+        payda3.setAttribute("type", "text");
+        payda3.setAttribute("placeholder", "Payda");
 
-    satir_4.appendChild(satir_4_sutun_1);
-    satir_4.appendChild(satir_4_sutun_2);
-    satir_4.appendChild(satir_4_sutun_3);
-    satir_4.appendChild(satir_4_sutun_4);
-    satir_4.appendChild(satir_4_sutun_5);
+        satir_4_sutun_1.appendChild(kokDerece3);
+        satir_4_sutun_2.appendChild(kokKatsayi3);
+        satir_4_sutun_3.appendChild(kokIciDeger3);
+        satir_4_sutun_5.appendChild(payda3);
 
-    /*
-    *
-    * Butonlar
-    *
-    * */
+        satir_4.appendChild(satir_4_sutun_1);
+        satir_4.appendChild(satir_4_sutun_2);
+        satir_4.appendChild(satir_4_sutun_3);
+        satir_4.appendChild(satir_4_sutun_4);
+        satir_4.appendChild(satir_4_sutun_5);
 
-    var satir_5 = document.createElement("div");
-    satir_5.setAttribute("id", "satir_5");
-    satir_5.setAttribute("class", "row");
+        /*
+        *
+        * Butonlar
+        *
+        * */
 
-    var satir_5_sutun_1 = document.createElement("div");
-    satir_5_sutun_1.setAttribute("id", "satir_5_sutun_1");
-    satir_5_sutun_1.setAttribute("class", "col");
+        var satir_5 = document.createElement("div");
+        satir_5.setAttribute("id", "satir_5");
+        satir_5.setAttribute("class", "row");
 
-    var satir_5_sutun_2 = document.createElement("div");
-    satir_5_sutun_2.setAttribute("id", "satir_5_sutun_2");
-    satir_5_sutun_2.setAttribute("class", "col");
+        var satir_5_sutun_1 = document.createElement("div");
+        satir_5_sutun_1.setAttribute("id", "satir_5_sutun_1");
+        satir_5_sutun_1.setAttribute("class", "col");
 
-    var satir_5_sutun_3 = document.createElement("div");
-    satir_5_sutun_3.setAttribute("id", "satir_5_sutun_3");
-    satir_5_sutun_3.setAttribute("class", "col");
+        var satir_5_sutun_2 = document.createElement("div");
+        satir_5_sutun_2.setAttribute("id", "satir_5_sutun_2");
+        satir_5_sutun_2.setAttribute("class", "col");
 
-
-    var sonucInput = document.createElement("INPUT");
-    sonucInput.setAttribute("class", "form-control");
-    sonucInput.setAttribute("name","2017_2_sonuc");
-    sonucInput.setAttribute("id","2017_2_sonuc");
-    sonucInput.setAttribute("placeholder", "Sonuç");
-
-    var silButon = document.createElement("BUTTON");
-    silButon.setAttribute("class", "btn btn-danger");
-    silButon.setAttribute("name", grup_no + "_silButon");
-    silButon.textContent = "Grubu Sil";
-    silButon.setAttribute("onclick", 'silButonununGrupNosunuGetir(this.getAttribute("name"))');
+        var satir_5_sutun_3 = document.createElement("div");
+        satir_5_sutun_3.setAttribute("id", "satir_5_sutun_3");
+        satir_5_sutun_3.setAttribute("class", "col");
 
 
-    var hesaplaButon = document.createElement("BUTTON");
-    hesaplaButon.setAttribute("class", "btn btn-success");
-    hesaplaButon.setAttribute("type", "button");
-    hesaplaButon.setAttribute("name", grup_no + "_hesaplaButon");
-    hesaplaButon.setAttribute("id", grup_no + "_hesaplaButon");
-    hesaplaButon.setAttribute("onclick", 'ikiBinOnYediNoktaIkiSorusuServleteGonder()');
-    hesaplaButon.textContent = "Hesapla";
+        var sonucInput = document.createElement("INPUT");
+        sonucInput.setAttribute("class", "form-control");
+        sonucInput.setAttribute("name", "2017_2_sonuc");
+        sonucInput.setAttribute("id", "2017_2_sonuc");
+        sonucInput.setAttribute("placeholder", "Sonuç");
 
-    satir_1.style.marginTop = '30px';
-    satir_2.style.marginTop = '10px';
-    satir_3.style.marginTop = '10px';
-    satir_4.style.marginTop = '10px';
-    satir_5.style.marginTop = '10px';
-    //18A2D9
-    // 7fb2f4
-    satir_1.style.backgroundColor = "#3d94ff";
-    satir_1.style.padding = "10px";
-    satir_1.style.borderRadius = "2em";
+        var silButon = document.createElement("BUTTON");
+        silButon.setAttribute("class", "btn btn-danger");
+        silButon.setAttribute("name", grup_no + "_silButon");
+        silButon.textContent = "Grubu Sil";
+        silButon.setAttribute("onclick", 'silButonununGrupNosunuGetir(this.getAttribute("name"))');
 
-    satir_5_sutun_1.appendChild(sonucInput);
-    satir_5_sutun_2.appendChild(silButon);
-    satir_5_sutun_3.appendChild(hesaplaButon);
 
-    satir_5.appendChild(satir_5_sutun_1);
-    satir_5.appendChild(satir_5_sutun_2);
-    satir_5.appendChild(satir_5_sutun_3);
+        var hesaplaButon = document.createElement("BUTTON");
+        hesaplaButon.setAttribute("class", "btn btn-success");
+        hesaplaButon.setAttribute("type", "button");
+        hesaplaButon.setAttribute("name", grup_no + "_hesaplaButon");
+        hesaplaButon.setAttribute("id", grup_no + "_hesaplaButon");
+        hesaplaButon.setAttribute("onclick", 'ikiBinOnYediNoktaIkiSorusuServleteGonder()');
+        hesaplaButon.textContent = "Hesapla";
 
-    satir_1.appendChild(soruAciklama);
-    satir_1.appendChild(satir_2);
-    satir_1.appendChild(satir_3);
-    satir_1.appendChild(satir_4);
-    satir_1.appendChild(satir_5);
-    satir_1.appendChild(sonucKutusu);
+        satir_1.style.marginTop = '30px';
+        satir_2.style.marginTop = '10px';
+        satir_3.style.marginTop = '10px';
+        satir_4.style.marginTop = '10px';
+        satir_5.style.marginTop = '10px';
+        //18A2D9
+        // 7fb2f4
+        satir_1.style.backgroundColor = "#3d94ff";
+        satir_1.style.padding = "10px";
+        satir_1.style.borderRadius = "2em";
 
-    var formId = document.getElementById("sayilarForm");
-    formId.appendChild(satir_1);
+        satir_5_sutun_1.appendChild(sonucInput);
+        satir_5_sutun_2.appendChild(silButon);
+        satir_5_sutun_3.appendChild(hesaplaButon);
 
+        satir_5.appendChild(satir_5_sutun_1);
+        satir_5.appendChild(satir_5_sutun_2);
+        satir_5.appendChild(satir_5_sutun_3);
+
+        satir_1.appendChild(soruAciklama);
+        satir_1.appendChild(satir_2);
+        satir_1.appendChild(satir_3);
+        satir_1.appendChild(satir_4);
+        satir_1.appendChild(satir_5);
+        satir_1.appendChild(sonucKutusu);
+
+        var formId = document.getElementById("sayilarForm");
+        formId.appendChild(satir_1);
+
+        kaydir();
+
+}
+
+function kaydir(){
+        window.scrollTo(0,document.body.scrollHeight);
 }

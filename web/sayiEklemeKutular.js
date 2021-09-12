@@ -2,6 +2,9 @@ function sayiEklemeKutular(operatorTipi){
     var satir_1Div = document.createElement("div");
     satir_1Div.setAttribute("class", "row");
     satir_1Div.setAttribute("id", grup_no + "_satir_1");
+    var satir_Aciklama = document.createElement("div");
+    satir_Aciklama.setAttribute("class", "row");
+    satir_Aciklama.setAttribute("id", "soruIndex");
     var satir_2Div = document.createElement("div");
     satir_2Div.setAttribute("class", "row");
     var satir_3Div = document.createElement("div");
@@ -16,36 +19,69 @@ function sayiEklemeKutular(operatorTipi){
     var node = "";
     switch (operatorTipi) {
         case "+":
-            node = document.createTextNode('+');
+            satir_3Div.innerHTML = "<center><p>+</p></center>";
+            satir_Aciklama.innerHTML = "<center><h3>Soru Formu</h3></center><br><h4>İpucu</h4><p>" +
+                "Aşağıdaki form, <b>iki köklü sayıyı toplar</b>. Aşağıdaki örnekten ve sağ üstteki anatomi bilgisine bakarak aşağıdaki kutucukları doldurabilirsin.<br>" +
+                "Örnek;<br>" +
+                "<center><b>√2= Derece: 2, Katsayı: 1, Değer: 2</b></center></p>";
             break;
         case "-":
-            node = document.createTextNode('-');
+            satir_3Div.innerHTML = "<center><p>-</p></center>";
+            satir_Aciklama.innerHTML = "<center><h3>Soru Formu</h3></center><br><h4>İpucu</h4><p>" +
+                "Aşağıdaki form, <b>iki köklü sayı ile çıkarma işlemi yapar.</b> Sağ üstteki anatomi bilgisine bakarak aşağıdaki kutucukları doldurabilirsin.<br>" +
+                "Örnek;<br>" +
+                "<center><b>3√7= Derece: 2, Katsayı: 3, Değer: 7</b></center></p>";
             break;
         case "*":
-            node = document.createTextNode('*');
+            satir_3Div.innerHTML = "<center><p>*</p></center>";
+            satir_Aciklama.innerHTML = "<center><h3>Soru Formu</h3></center><br><h4>İpucu</h4><p>" +
+                "Aşağıdaki form, <b>iki köklü sayı ile çarpma işlemi yapar</b>. Kutucukları doldururken, aşağıdaki örnekten ve sağ üstteki anatomi bilgisinden faydalanabilirsin.<br>" +
+                "Örnek;<br>" +
+                "<center><b>5√11= Derece: 2, Katsayı: 5, Değer: 11</b></center></p>";
             break;
         case "/":
-            node = document.createTextNode('/');
+            satir_3Div.innerHTML = "<center><p>/</p></center>";
+            satir_Aciklama.innerHTML = "<center><h3>Soru Formu</h3></center><br><h4>İpucu</h4><p>" +
+                "Aşağıdaki form, <b>iki köklü sayı ile bölme işlemi yapar.</b> Kutucukları doldururken, aşağıdaki örnekten ve sağ üstteki anatomi bilgisinden faydalanabilirsin.<br>" +
+                "Örnek;<br>" +
+                "<center><b>7√2= Derece: 2, Katsayı: 7, Değer: 2</b></center></p>";
             break;
         case "√":
-            node = document.createTextNode('√');
+            satir_3Div.innerHTML = "<center><p>√</p></center>";
+            satir_Aciklama.innerHTML = "<center><h3>Soru Formu</h3></center><br><h4>İpucu</h4><p>" +
+                "Aşağıdaki form, değerleri girilen <b>köklü sayının en sade halini hesaplar.</b> Kutucukları doldururken, aşağıdaki örnekten ve sağ üstteki anatomi bilgisinden faydalanabilirsin.<br>" +
+                "Örnek;<br>" +
+                "<center><b>9√3= Derece: 2, Katsayı: 9, Değer: 3</b></center></p>";
             break;
         case "0/":
-            node = document.createTextNode('0/');
+            satir_3Div.innerHTML = "<center><p>0/</p></center>";
+            satir_Aciklama.innerHTML = "<center><h3>Soru Formu</h3></center><br><h4>İpucu</h4><p>" +
+                "Aşağıdaki form, değerleri girilen <b>köklü sayının tam kare olup olmadığını kontrol eder.</b> Kutucukları doldururken, aşağıdaki örnekten ve sağ üstteki anatomi bilgisinden faydalanabilirsin.<br>" +
+                "Örnek;<br>" +
+                "<center><b>4√3= Derece: 2, Katsayı: 4, Değer: 3</b></center></p>";
             break;
         case "^√==":
-            node = document.createTextNode('^√==');
+            satir_3Div.innerHTML = "<center><p>^√==</p></center>";
+            satir_Aciklama.innerHTML = "<center><h3>Soru Formu</h3></center><br><h4>İpucu</h4><p>" +
+                "Aşağıdaki form, değerleri girilen <b>iki köklü sayının kök içi değerleri ve kök derecelerinin eşit olup olmadığını kontrol eder.</b> Kutucukları doldururken, aşağıdaki örnekten ve sağ üstteki anatomi bilgisinden faydalanabilirsin.<br>" +
+                "Örnek;<br>" +
+                "<center><b>8√7= Derece: 2, Katsayı: 8, Değer: 7</b></center></p>";
             break;
         case "^==":
-            node = document.createTextNode('^==');
+            satir_3Div.innerHTML = "<center><p>^==</p></center>";
+            satir_Aciklama.innerHTML = "<center><h3>Soru Formu</h3></center><br><h4>İpucu</h4><p>" +
+                "Aşağıdaki form, değerleri girilen <b>iki köklü sayının ve kök derecelerinin eşit olup olmadığını kontrol eder.</b> Kutucukları doldururken, aşağıdaki örnekten ve sağ üstteki anatomi bilgisinden faydalanabilirsin.<br>" +
+                "Örnek;<br>" +
+                "<center><b>12√2= Derece: 2, Katsayı: 12, Değer: 2</b></center></p>";
             break;
         default:
             node = document.createTextNode('Hata');
     }
-    satir_3Div.appendChild(node);
+    satir_3Div.style.fontSize = "14pt";
+    /*satir_3Div.appendChild(node);
     satir_3Div.style.textAlign = "center";
     satir_3Div.style.fontSize = "14pt";
-    satir_3Div.style.fontColor = "#ffffff";
+    satir_3Div.style.fontColor = "#ffffff";*/
 
     var satir_2_sutun_1Div = document.createElement("div");
     var satir_2_sutun_2Div = document.createElement("div");
@@ -165,6 +201,7 @@ function sayiEklemeKutular(operatorTipi){
     satir_5Div.appendChild(satir_5_sutun_2Div);
     satir_5Div.appendChild(satir_5_sutun_3Div);
 
+    satir_1Div.appendChild(satir_Aciklama);
     satir_1Div.appendChild(satir_2Div);
     satir_1Div.appendChild(satir_3Div);
     satir_1Div.appendChild(satir_4Div);
@@ -181,4 +218,6 @@ function sayiEklemeKutular(operatorTipi){
 
     var formId = document.getElementById("sayilarForm");
     formId.appendChild(satir_1Div);
+
+    window.scrollTo(0,document.body.scrollHeight);
 }
