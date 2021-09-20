@@ -1,0 +1,8 @@
+Bu klasör ve repository altındaki belgeler dışında
+	- Takım Rehberi
+	- Haftalık Durum Toplantıları
+bulunmamaktadır. Bunun sebebi projenin, ekip olarak değil, bireysel olarak gerçekleştirilmiş olmasıdır.
+
+	- Kaynak Kodu bu repository altında bulunmaktadır.
+	- Sürüm Kontrol Deposu da yine bu repository altındadır.
+	- Nihai Ürün https://www.youtube.com/watch?v=OBAl8rf-678 linkinde bulunmaktadır.
