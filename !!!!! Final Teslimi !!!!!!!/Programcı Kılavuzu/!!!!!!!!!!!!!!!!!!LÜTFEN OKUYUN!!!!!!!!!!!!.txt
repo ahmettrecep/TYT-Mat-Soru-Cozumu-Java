@@ -1,0 +1,2 @@
+Bu klasördeki akış diyagramları hem .png formatında hem de .drawio formatında bulunmaktadır.
+Bu klasörün amacı Programcı Kılavuzunun yerini tutmaktır.
